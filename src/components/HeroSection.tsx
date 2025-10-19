@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
             custom={0}
             variants={textVariants}
           >
-            Hi, I'm Mohamed Al Meshaal —
+            Hello, I'm Mohamed Saed Meshaal —
           </motion.span>{" "}
           <motion.span 
             className="inline-block hero-text-gradient"
@@ -54,7 +54,7 @@ const HeroSection: React.FC = () => {
             custom={1}
             variants={textVariants}
           >
-            Leadership, Innovation, and Impact — Building the next generation of changemakers
+            Student leader & operations coordinator — building initiatives, leading teams, and creating impact.
           </motion.span>
         </motion.h1>
         
