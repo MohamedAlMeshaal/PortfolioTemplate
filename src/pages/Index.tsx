@@ -65,20 +65,23 @@ const Index: React.FC = () => {
             right: '25vw',
             animationDelay: '1.5s'
           }}></div>
-        </div>
-        
+        </div>   
         <header className="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
        <h1 className="text-xl font-bold italic flex items-center gap-3">
   <div className="relative group">
     <img
-  src="/MyPicture.jpeg"
-  alt="Mohamed Saed"
-  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-white/60 shadow-lg transition-transform duration-500 ease-out hover:scale-125 hover:border-white/90 hover:shadow-2xl"
-  loading="lazy"
-  decoding="async"
-/>
-    <span className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300"></span>
+      src="/MyPicture.jpeg"
+      alt="Mohamed Saed"
+      className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-white/60 shadow-lg
+                 transition-transform duration-500 ease-out group-hover:scale-125 group-hover:border-white/90 group-hover:shadow-2xl
+                 will-change-transform"
+      loading="lazy"
+      decoding="async"
+    />
+    {/* اللمعة فوق الصورة لكن بدون اعتراض للماوس */}
+    <span className="pointer-events-none absolute inset-0 rounded-full bg-white/10 opacity-0
+                     group-hover:opacity-100 blur-md transition-opacity duration-300"></span>
   </div>
   Mohamed Saed
 </h1>
