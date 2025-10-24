@@ -1,26 +1,32 @@
-import React from 'react';
-import { 
-  Github, Code2, Database, 
-  ServerCrash, Container, Cpu, Cloud, Terminal, 
-  Paintbrush, Layers 
-} from 'lucide-react';
+import {
+  Users,
+  Settings,
+  Target,
+  Mic,
+  Calendar,
+  Lightbulb,   // نستخدمه بدل Brain لضمان التوافق
+  Handshake,   // لو ما وُجد في نسختك استبدله بـ HandHelping
+  FileText,
+  BarChart,
+  BookOpen,
+  Cpu
+} from "lucide-react";
 
-const TechMarquee: React.FC = () => {
- const techStackRow1 = [
-  { name: "Leadership & Team Management", icon: <Users className="w-5 h-5 mr-2" /> },
-  { name: "Operations & Logistics Coordination", icon: <Settings className="w-5 h-5 mr-2" /> },
-  { name: "Strategic Planning & Execution", icon: <Target className="w-5 h-5 mr-2" /> },
-  { name: "Communication & Public Speaking", icon: <Mic className="w-5 h-5 mr-2" /> },
-  { name: "Event Management & Organization", icon: <Calendar className="w-5 h-5 mr-2" /> },
-  { name: "Decision-Making Under Pressure", icon: <Brain className="w-5 h-5 mr-2" /> },
+const techStackRow1 = [
+  { name: "Leadership & Team Management",         icon: <Users className="w-5 h-5 mr-2" /> },
+  { name: "Operations & Logistics Coordination",  icon: <Settings className="w-5 h-5 mr-2" /> },
+  { name: "Strategic Planning & Execution",       icon: <Target className="w-5 h-5 mr-2" /> },
+  { name: "Communication & Public Speaking",      icon: <Mic className="w-5 h-5 mr-2" /> },
+  { name: "Event Management & Organization",      icon: <Calendar className="w-5 h-5 mr-2" /> },
+  { name: "Decision-Making Under Pressure",       icon: <Lightbulb className="w-5 h-5 mr-2" /> },
 ];
 
 const techStackRow2 = [
-  { name: "Conflict Resolution & Problem Solving", icon: <Handshake className="w-5 h-5 mr-2" /> },
-  { name: "Microsoft Office Suite", icon: <FileText className="w-5 h-5 mr-2" /> },
-  { name: "Tally ERP", icon: <BarChart className="w-5 h-5 mr-2" /> },
-  { name: "Zoho Books", icon: <BookOpen className="w-5 h-5 mr-2" /> },
-  { name: "AI Programs & Automation Tools", icon: <Cpu className="w-5 h-5 mr-2" /> },
+  { name: "Conflict Resolution & Problem Solving", icon: <Handshake className="w-5 h-5 mr-2" /> }, // إن لم يعمل: HandHelping
+  { name: "Microsoft Office Suite",                icon: <FileText className="w-5 h-5 mr-2" /> },
+  { name: "Tally ERP",                              icon: <BarChart className="w-5 h-5 mr-2" /> },
+  { name: "Zoho Books",                             icon: <BookOpen className="w-5 h-5 mr-2" /> },
+  { name: "AI Programs & Automation Tools",         icon: <Cpu className="w-5 h-5 mr-2" /> },
 ];
 
   const renderMarqueeItems = (items: Array<{ name: string; icon: React.ReactNode }>) => {
