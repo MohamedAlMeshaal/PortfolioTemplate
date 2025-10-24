@@ -71,7 +71,7 @@ const Index: React.FC = () => {
        <h1 className="text-xl font-bold italic flex items-center gap-3">
   <div className="relative group">
     <img
-      src="/MyPicture.jpeg"
+      src="/MyPicture2.jpeg"
       alt="Mohamed Saed"
       className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-white/60 shadow-lg
                  transition-transform duration-500 ease-out group-hover:scale-125 group-hover:border-white/90 group-hover:shadow-2xl
