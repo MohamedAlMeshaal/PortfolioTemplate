@@ -51,6 +51,9 @@ const TechMarquee: React.FC = () => {
 
   return (
     <section className="py-20 bg-dark/30 relative max-w-screen-xl mx-auto px-10 overflow-hidden">
+      <h2 className="text-3xl md:text-4xl font-bold text-white/90 mb-10 text-center tracking-wide">
+  Skills
+</h2>
       {/* Light effect for tech section */}
       <div
         className="absolute w-[400px] h-[400px] rounded-full bg-radial-glow-premium opacity-30
