@@ -31,15 +31,23 @@ const TechMarquee: React.FC = () => {
     { name: "AI Programs & Automation Tools",        icon: <Cpu className="w-5 h-5 mr-2" /> },
   ];
 
-  const renderMarqueeItems = (items: Array<{ name: string; icon: ReactNode }>) => {
-    // إذا ما تحتاج سكرول لا نهائي، ما نكرّر العناصر
-    return items.map((tech, index) => (
-      <span key={index} className="tech-badge-premium mx-5 flex items-center">
-        {tech.icon}
-        {tech.name}
-      </span>
-    ));
-  };
+  const renderMarqueeItems = (items: Array<{ name: string; icon: React.ReactNode }>) => {
+  return items.map((tech, index) => (
+    <span
+      key={index}
+      className="
+        mx-5 inline-flex items-center rounded-full
+        bg-white/5 border border-white/20 backdrop-blur
+        px-4 py-2 text-white/90 shadow-sm
+        whitespace-nowrap !w-auto !max-w-none !overflow-visible
+        text-sm md:text-base
+      "
+    >
+      <span className="mr-2 shrink-0">{tech.icon}</span>
+      <span className="leading-none">{tech.name}</span>
+    </span>
+  ));
+};
 
   return (
     <section className="py-20 bg-dark/30 relative max-w-screen-xl mx-auto px-10 overflow-hidden">
