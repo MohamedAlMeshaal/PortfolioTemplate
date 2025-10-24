@@ -76,7 +76,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          Building robust solutions with code, design, and caffeine.
+          Combining leadership and operations to build impact that lasts.
         </motion.p>
 
         <motion.div
