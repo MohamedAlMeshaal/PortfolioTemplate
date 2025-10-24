@@ -4,8 +4,8 @@ import {
   Target,
   Mic,
   Calendar,
-  Lightbulb,   // نستخدمه بدل Brain لضمان التوافق
-  Handshake,   // لو ما وُجد في نسختك استبدله بـ HandHelping
+  Lightbulb,   
+  Handshake,   
   FileText,
   BarChart,
   BookOpen,
