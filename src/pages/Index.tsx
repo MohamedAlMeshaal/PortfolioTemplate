@@ -72,13 +72,13 @@ const Index: React.FC = () => {
         <h1 className="text-xl font-bold italic flex items-center gap-3">
   <div className="relative group">
     <img
-      src="/My Picture.jpeg"                // <-- اسم الملف بالضبط
+      src="/My Picture.jpeg"
       alt="Mohamed Saed"
       className="w-8 h-8 rounded-full border border-white/40 transition-transform duration-300 group-hover:scale-110 group-hover:border-white/80"
       loading="lazy"
       decoding="async"
       onError={(e) => {
-        (e.currentTarget as HTMLImageElement).src = "/placeholder.svg"; // صورة احتياطية
+        (e.currentTarget as HTMLImageElement).src = "/placeholder.svg";
       }}
     />
     <span className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300"></span>
