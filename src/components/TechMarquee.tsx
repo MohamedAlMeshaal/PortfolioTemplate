@@ -6,26 +6,22 @@ import {
 } from 'lucide-react';
 
 const TechMarquee: React.FC = () => {
-  const techStackRow1 = [
-    { name: "React", icon: <Code2 className="w-5 h-5 mr-2" /> },
-    { name: "Next.js", icon: <Code2 className="w-5 h-5 mr-2" /> },
-    { name: "Node.js", icon: <ServerCrash className="w-5 h-5 mr-2" /> },
-    { name: "TailwindCSS", icon: <Paintbrush className="w-5 h-5 mr-2" /> },
-    { name: "PostgreSQL", icon: <Database className="w-5 h-5 mr-2" /> },
-    { name: "AWS", icon: <Cloud className="w-5 h-5 mr-2" /> },
-    { name: "Docker", icon: <Container className="w-5 h-5 mr-2" /> },
-    { name: "GraphQL", icon: <Cpu className="w-5 h-5 mr-2" /> }
-  ];
-  
-  const techStackRow2 = [
-    { name: "Java", icon: <Cpu className="w-5 h-5 mr-2" /> },
-    { name: "Python", icon: <Terminal className="w-5 h-5 mr-2" /> },
-    { name: "TypeScript", icon: <Code2 className="w-5 h-5 mr-2" /> },
-    { name: "MongoDB", icon: <Database className="w-5 h-5 mr-2" /> },
-    { name: "Redis", icon: <Database className="w-5 h-5 mr-2" /> },
-    { name: "Kubernetes", icon: <Layers className="w-5 h-5 mr-2" /> },
-    { name: "GitHub Actions", icon: <Github className="w-5 h-5 mr-2" /> }
-  ];
+ const techStackRow1 = [
+  { name: "Leadership & Team Management", icon: <Users className="w-5 h-5 mr-2" /> },
+  { name: "Operations & Logistics Coordination", icon: <Settings className="w-5 h-5 mr-2" /> },
+  { name: "Strategic Planning & Execution", icon: <Target className="w-5 h-5 mr-2" /> },
+  { name: "Communication & Public Speaking", icon: <Mic className="w-5 h-5 mr-2" /> },
+  { name: "Event Management & Organization", icon: <Calendar className="w-5 h-5 mr-2" /> },
+  { name: "Decision-Making Under Pressure", icon: <Brain className="w-5 h-5 mr-2" /> },
+];
+
+const techStackRow2 = [
+  { name: "Conflict Resolution & Problem Solving", icon: <Handshake className="w-5 h-5 mr-2" /> },
+  { name: "Microsoft Office Suite", icon: <FileText className="w-5 h-5 mr-2" /> },
+  { name: "Tally ERP", icon: <BarChart className="w-5 h-5 mr-2" /> },
+  { name: "Zoho Books", icon: <BookOpen className="w-5 h-5 mr-2" /> },
+  { name: "AI Programs & Automation Tools", icon: <Cpu className="w-5 h-5 mr-2" /> },
+];
 
   const renderMarqueeItems = (items: Array<{ name: string; icon: React.ReactNode }>) => {
     // if a seamless continuous scroll isn't needed, no duplication needed.
