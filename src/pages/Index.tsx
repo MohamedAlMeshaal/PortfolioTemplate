@@ -69,14 +69,18 @@ const Index: React.FC = () => {
         
         <header className="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 className="text-xl font-bold italic flex items-center gap-3">
-              <img 
-                src="/your-photo.jpg" 
-                alt="Mohamed Saed" 
-                className="w-8 h-8 rounded-full border border-white/30"
-             />
-             Mohamed Saed
-           </h1>
+          <h1 className="text-xl font-bold italic flex items-center gap-3">
+  <div className="relative group">
+    <img
+      src="/your-photo.jpg"
+      alt="Mohamed Saed"
+      className="w-8 h-8 rounded-full border border-white/40 transition-transform duration-300 group-hover:scale-110 group-hover:border-white/80"
+      loading="lazy"
+    />
+    <span className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300"></span>
+  </div>
+  Mohamed Saed
+</h1>
 
             <nav className="hidden md:block">
               <ul className="flex space-x-8">
