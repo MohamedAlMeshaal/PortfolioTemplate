@@ -120,8 +120,8 @@ const ProjectsSection: React.FC = () => {
         >
           Featured Projects
         </motion.h2>
-        <p className="text-sm text-white/60 mt-2">
-  Projects I led as the President of the College of Business Society (COBS).
+       <p className="text-base text-white/60 mt-4 mb-6 tracking-wide">
+  COBS Flagship Events
 </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
