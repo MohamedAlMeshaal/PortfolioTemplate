@@ -13,50 +13,80 @@ interface Project {
 }
 
 const ProjectsSection: React.FC = () => {
-  const projects: Project[] = [
-    {
-      id: 1,
-      title: "Project 1",
-      description: "xyz",
-      techStack: ["React", "Node.js", "Express"],
-      url: "#"
-    },
-    {
-      id: 2,
-      title: "Project 2",
-      description: "abc",
-      techStack: ["Vue.js", "Django", "MongoDB"],
-      url: "#"
-    },
-    {
-      id: 3,
-      title: "Project 3",
-      description: "123",
-      techStack: ["Angular", "Flask", "PostgreSQL"],
-      url: "#"
-    },
-    {
-      id: 4,
-      title: "Project 4",
-      description: "456",
-      techStack: ["Svelte", "Ruby on Rails", "MySQL"],
-      url: "#"
-    },
-    {
-      id: 5,
-      title: "Project 5",
-      description: "789",
-      techStack: ["Next.js", "Spring Boot", "SQLite"],
-      url: "#"     
-    },
-    {
-      id : 6,
-      title: "Project 6",
-      description: "101",
-      techStack: ["Golang", "ASP.NET", "Firebase"],
-      url: "#"
-    }
-  ];
+ const projects: Project[] = [
+  {
+    id: 1,
+    title: "Welcome Back Event – Walhana Alaikom",
+    description:
+      "Ramadan-themed welcome event for semester 2024/2. Re-energized students and celebrated community spirit. Managed 70+ volunteers and 500+ attendees; secured sponsorship and media coverage; organized in less than a week.",
+    techStack: [
+      "Event Design",
+      "Leadership",
+      "Operations",
+      "Volunteers",
+      "Sponsorship",
+      "Media Coverage",
+    ],
+    url: "#",
+  },
+  {
+    id: 2,
+    title: "COBS Ramadan Football Tournament",
+    description:
+      "Student football tournament uniting diverse teams with excitement and sportsmanship. 150+ participants, large audience turnout, external sponsorship, media coverage; managed 30+ volunteers and overcame logistics challenges.",
+    techStack: [
+      "Sports Event",
+      "Team Management",
+      "Leadership",
+      "Sponsorship",
+      "Media Coverage",
+      "Volunteers",
+    ],
+    url: "#",
+  },
+  {
+    id: 3,
+    title: "COBS Carnival",
+    description:
+      "Vibrant handmade carnival with creative booth games, festive decorations, popcorn, and ice cream. 80+ volunteers, 1,000+ attendees, major sponsorships, wide media coverage; high event impact.",
+    techStack: [
+      "Carnival Design",
+      "Operations",
+      "Volunteers",
+      "Sponsorship",
+      "Media Coverage",
+    ],
+    url: "#",
+  },
+  {
+    id: 4,
+    title: "Guests of COBS – A Talk with an Inspiring Figure",
+    description:
+      "Open talk with Mr. Suheil Al-Qusaibi on challenges and lessons from his entrepreneurial journey. High student turnout; boosted interest in inspirational sessions and career dialogues.",
+    techStack: [
+      "Leadership Talk",
+      "Organization",
+      "Public Speaking",
+      "Event Planning",
+    ],
+    url: "#",
+  },
+  {
+    id: 5,
+    title: "COBS Carnival 2",
+    description:
+      "Second edition: handmade games, popcorn, cotton candy, face painting, and music. Managed 100+ volunteers; 2,000+ attendees; major sponsorships; wide media coverage; boosted society recognition and membership interest.",
+    techStack: [
+      "Event Design",
+      "Leadership",
+      "Operations",
+      "Volunteers",
+      "Sponsorship",
+      "Media Coverage",
+    ],
+    url: "#",
+  },
+];
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
