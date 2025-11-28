@@ -1,7 +1,7 @@
-import { useParams } from "react-router-dom";
-// 👇 إذا يشتغل عندك alias "@", خله كذا:
+import { useParams, Link } from "react-router-dom";
+// جرّب هذا أولاً، إذا عطاك خطأ في alias "@", استبدله بالسطر اللي بعده
 import { projectsData } from "@/lib/projectsData";
-// 👇 لو عطاك خطأ في السطر فوق، استبدله بهذا بدلًا عنه:
+// لو طلع خطأ، علّق السطر اللي فوق واستخدم هذا:
 // import { projectsData } from "../lib/projectsData";
 
 export default function ProjectDetails() {
@@ -10,88 +10,123 @@ export default function ProjectDetails() {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <p className="text-lg">Project not found.</p>
-      </div>
+      <main className="min-h-screen bg-black text-white flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <p className="text-lg">Project not found.</p>
+          <Link
+            to="/#projects"
+            className="text-sm text-white/70 hover:text-white underline"
+          >
+            ← Back to projects
+          </Link>
+        </div>
+      </main>
     );
   }
 
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
-      <div className="max-w-5xl mx-auto px-4 py-16">
-        {/* Title + Date */}
-        <h1 className="text-3xl md:text-4xl font-bold italic">{project.title}</h1>
-        {project.date && <p className="text-white/60 mt-2">{project.date}</p>}
+      <div className="max-w-5xl mx-auto px-4 py-10 md:py-16">
+        {/* Top bar */}
+        <div className="flex items-center justify-between gap-4 mb-8">
+          <Link
+            to="/#projects"
+            className="text-sm text-white/60 hover:text-white/90 inline-flex items-center gap-2"
+          >
+            <span className="text-lg">←</span>
+            <span>Back to Featured Projects</span>
+          </Link>
 
-        {/* Description */}
-        <p className="mt-6 text-neutral-300 leading-relaxed">{project.description}</p>
-
-        {/* Role & Outcome */}
-        <div className="mt-4 space-y-1 text-white/70">
-          {project.role && (
-            <p>
-              <span className="text-white/50">Role:</span> {project.role}
-            </p>
-          )}
-          {project.outcome && (
-            <p>
-              <span className="text-white/50">Outcome:</span> {project.outcome}
-            </p>
+          {project.date && (
+            <span className="text-xs md:text-sm px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70">
+              {project.date}
+            </span>
           )}
         </div>
 
-        {/* Tags */}
-        {project.tags?.length ? (
-          <div className="flex flex-wrap gap-2 mt-6">
-            {project.tags.map((t) => (
-              <span
-                key={t}
-                className="text-xs px-3 py-1 rounded-full bg-neutral-800 border border-white/10"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-        ) : null}
+        {/* Title & summary */}
+        <header className="space-y-4 mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold italic leading-tight">
+            {project.title}
+          </h1>
 
-        {/* Gallery */}
-        {project.images && project.images.length > 0 && (
-          <>
-            <h2 className="text-xl font-semibold mt-10 mb-4">Gallery</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {project.images.map((src, i) => (
-                <div
-                  key={i}
-                  className="aspect-video overflow-hidden rounded-xl border border-white/10"
+          {project.role && (
+            <p className="text-sm md:text-base text-white/70">
+              <span className="text-white/50">Role:&nbsp;</span>
+              {project.role}
+            </p>
+          )}
+
+          <p className="text-base md:text-lg text-neutral-300 leading-relaxed">
+            {project.description}
+          </p>
+
+          {project.outcome && (
+            <p className="text-sm md:text-base text-white/80">
+              <span className="text-white/50">Key Outcomes:&nbsp;</span>
+              {project.outcome}
+            </p>
+          )}
+
+          {/* Tags */}
+          {project.tags?.length ? (
+            <div className="flex flex-wrap gap-2 pt-2">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs px-3 py-1 rounded-full bg-neutral-800 border border-white/10 text-white/80"
                 >
-                  <img
-                    src={src}
-                    alt={`${project.title} ${i + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                  {tag}
+                </span>
               ))}
             </div>
-          </>
-        )}
+          ) : null}
+        </header>
 
-        {/* Video */}
-        {project.videoUrl && (
-          <>
-            <h2 className="text-xl font-semibold mt-10 mb-4">Video</h2>
-            <div className="aspect-video rounded-xl overflow-hidden border border-white/10">
-              <iframe
-                src={project.videoUrl}
-                title={`${project.title} video`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-          </>
-        )}
+        {/* Media section */}
+        {(project.images && project.images.length > 0) || project.videoUrl ? (
+          <section className="space-y-8 mt-10">
+            {project.images && project.images.length > 0 && (
+              <div>
+                <h2 className="text-lg md:text-xl font-semibold mb-4">
+                  Event Gallery
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  {project.images.map((src, i) => (
+                    <div
+                      key={i}
+                      className="aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900"
+                    >
+                      <img
+                        src={src}
+                        alt={`${project.title} ${i + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {project.videoUrl && (
+              <div>
+                <h2 className="text-lg md:text-xl font-semibold mb-4">
+                  Event Highlight Video
+                </h2>
+                <div className="aspect-video rounded-xl overflow-hidden border border-white/10 bg-neutral-900">
+                  <iframe
+                    src={project.videoUrl}
+                    title={`${project.title} video`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
+            )}
+          </section>
+        ) : null}
       </div>
     </main>
   );
 }
-
