@@ -25,7 +25,8 @@ export const projectsData: ProjectDetails[] = [
     images: [
        "/cobs-walhana-1.jpg"
     ],
-    // videoUrl: "/cobs-walhana-video1.mp4"
+    // videoUrl:
+    "/cobs-walhana-video1.mp4"
     "/cobs-walhana-video2.mp4"
   },
   {
