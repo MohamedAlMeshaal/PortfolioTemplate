@@ -8,7 +8,7 @@ export type ProjectDetails = {
   outcome?: string;      // النتائج/الأثر
   tags: string[];        // البادجز (بالإنجليزي)
   images?: string[];     // روابط صور (اختياري)
-  videoUrl?: string;     // رابط فيديو (اختياري)
+  videos?: string;     // رابط فيديو (اختياري)
 };
 
 export const projectsData: ProjectDetails[] = [
@@ -22,12 +22,11 @@ export const projectsData: ProjectDetails[] = [
     outcome:
       "Managed 70+ volunteers · 500+ attendees · sponsorship & media coverage · organized in < 1 week",
     tags: ["Event Design", "Leadership", "Operations", "Volunteers", "Sponsorship", "Media Coverage"],
-    images: [
-       "/cobs-walhana-1.jpg"
-    ],
-    // videoUrl:
-    "/cobs-walhana-video1.mp4"
-    "/cobs-walhana-video2.mp4"
+    images: ["/cobs-walhana-1.jpg"],
+    videos:  [
+    "/cobs-walhana-video1.mp4",
+    "/cobs-walhana-video2.mp4  "
+  ]
   },
   {
     slug: "cobs-ramadan-football",
