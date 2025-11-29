@@ -22,9 +22,7 @@ export const projectsData: ProjectDetails[] = [
     outcome:
       "Managed 70+ volunteers · 500+ attendees · sponsorship & media coverage · organized in < 1 week",
     tags: ["Event Design", "Leadership", "Operations", "Volunteers", "Sponsorship", "Media Coverage"],
-    images: [
-      "/cobs-walhana-1.jpg"
-    ]
+    images: ["/cobs-walhana-1.jpg"],
     videos:  [
     "/cobs-walhana-video1.mp4.mp4",
     "/cobs-walhana-video2.mp4.mp4  "
