@@ -23,9 +23,10 @@ export const projectsData: ProjectDetails[] = [
       "Managed 70+ volunteers · 500+ attendees · sponsorship & media coverage · organized in < 1 week",
     tags: ["Event Design", "Leadership", "Operations", "Volunteers", "Sponsorship", "Media Coverage"],
     images: [
-      // أمثلة لاحقًا: "/images/walhana/1.jpg", "/images/walhana/2.jpg"
+       "/cobs-walhana-1.jpg"
     ],
-    // videoUrl: "https://www.youtube.com/embed/XXXXXXXX",
+    // videoUrl: "/cobs-walhana-video1.mp4"
+    "/cobs-walhana-video2.mp4"
   },
   {
     slug: "cobs-ramadan-football",
