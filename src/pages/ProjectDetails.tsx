@@ -83,50 +83,56 @@ export default function ProjectDetails() {
           ) : null}
         </header>
 
-        {/* Media section */}
-        {(project.images && project.images.length > 0) || project.videoUrl ? (
-          <section className="space-y-8 mt-10">
-            {project.images && project.images.length > 0 && (
-              <div>
-                <h2 className="text-lg md:text-xl font-semibold mb-4">
-                  Event Gallery
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                  {project.images.map((src, i) => (
-                    <div
-                      key={i}
-                      className="aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900"
-                    >
-                      <img
-                        src={src}
-                        alt={`${project.title} ${i + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
+              {/* Media section */}
+      {(project.images && project.images.length > 0) ||
+      (project.videos && project.videos.length > 0) ? (
+        <section className="space-y-8 mt-10">
+          {project.images && project.images.length > 0 && (
+            <div>
+              <h2 className="text-lg md:text-xl font-semibold mb-4">
+                Event Gallery
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {project.images.map((src, i) => (
+                  <div
+                    key={i}
+                    className="aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900"
+                  >
+                    <img
+                      src={src}
+                      alt={`${project.title} ${i + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
               </div>
-            )}
+            </div>
+          )}
 
-            {project.videoUrl && (
-              <div>
-                <h2 className="text-lg md:text-xl font-semibold mb-4">
-                  Event Highlight Video
-                </h2>
-                <div className="aspect-video rounded-xl overflow-hidden border border-white/10 bg-neutral-900">
-                  <iframe
-                    src={project.videoUrl}
-                    title={`${project.title} video`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
+          {project.videos && project.videos.length > 0 && (
+            <div>
+              <h2 className="text-lg md:text-xl font-semibold mb-4">
+                Event Highlight Videos
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {project.videos.map((src, i) => (
+                  <div
+                    key={i}
+                    className="aspect-video rounded-xl overflow-hidden border border-white/10 bg-neutral-900"
+                  >
+                    <video
+                      src={src}
+                      controls
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
               </div>
-            )}
-          </section>
-        ) : null}
-      </div>
+            </div>
+          )}
+        </section>
+      ) : null}
+            </div>
     </main>
   );
 }
