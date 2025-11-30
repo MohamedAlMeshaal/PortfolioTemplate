@@ -120,23 +120,6 @@ export default function ProjectDetails() {
     </div>
   )}
 </section>
-              {activeImage && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-    <button
-      type="button"
-      onClick={() => setActiveImage(null)}
-      className="absolute top-6 right-6 rounded-full bg-white/10 px-4 py-2 text-sm text-white hover:bg-white/20"
-    >
-      ✕ Close
-    </button>
-
-    <img
-      src={activeImage}
-      alt="Expanded view"
-      className="max-w-[90vw] max-h-[80vh] rounded-2xl shadow-2xl object-contain"
-    />
-  </div>
-)}
 
           {project.videos && project.videos.length > 0 && (
             <div>
