@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
 // جرّب هذا أولاً، إذا عطاك خطأ في alias "@", استبدله بالسطر اللي بعده
 import { projectsData } from "@/lib/projectsData";
 // لو طلع خطأ، علّق السطر اللي فوق واستخدم هذا:
@@ -7,6 +8,8 @@ import { projectsData } from "@/lib/projectsData";
 export default function ProjectDetails() {
   const { slug } = useParams<{ slug: string }>();
   const project = projectsData.find((p) => p.slug === slug);
+
+    const [activeImage, setActiveImage] = useState<string | null>(null);
 
   if (!project) {
     return (
@@ -92,22 +95,48 @@ export default function ProjectDetails() {
               <h2 className="text-lg md:text-xl font-semibold mb-4">
                 Event Gallery
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {project.images.map((src, i) => (
-                  <div
-                    key={i}
-                    className="aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900"
-                  >
-                    <img
-                      src={src}
-                      alt={`${project.title} ${i + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+            <section className="space-y-8 mt-10">
+  {project.images && project.images.length > 0 && (
+    <div>
+      <h2 className="text-lg md:text-xl font-semibold mb-4">
+        Event Gallery
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {project.images.map((src, i) => (
+          <button
+            key={i}
+            type="button"
+            onClick={() => setActiveImage(src)}
+            className="group aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900 focus:outline-none"
+          >
+            <img
+              src={src}
+              alt={`${project.title} ${i + 1}`}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </button>
+        ))}
+      </div>
+    </div>
+  )}
+</section>
+              {activeImage && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+    <button
+      type="button"
+      onClick={() => setActiveImage(null)}
+      className="absolute top-6 right-6 rounded-full bg-white/10 px-4 py-2 text-sm text-white hover:bg-white/20"
+    >
+      ✕ Close
+    </button>
+
+    <img
+      src={activeImage}
+      alt="Expanded view"
+      className="max-w-[90vw] max-h-[80vh] rounded-2xl shadow-2xl object-contain"
+    />
+  </div>
+)}
 
           {project.videos && project.videos.length > 0 && (
             <div>
