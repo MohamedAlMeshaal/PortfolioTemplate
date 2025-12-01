@@ -8,103 +8,105 @@ type ExperienceItem = {
   bullets: string[];
 };
 
-const experience: ExperienceItem[] = [
+const experiences = [
   {
     role: "Operations Coordinator",
-    company: "The Leader – Youth Leadership Programs",
-    location: "Khobar, Riyadh, Jeddah (KSA)",
-    period: "2023 – Present",
+    company: "The Leader | Youth Leadership Programs",
+    date: "July 2025 – Present",
     bullets: [
       "Coordinated large-scale leadership bootcamps for 70+ participants per cohort.",
       "Managed volunteer teams, daily schedules, logistics, and on-ground operations.",
-      "Collaborated with parents, schools, and partners to ensure a smooth program experience.",
-      "Handled registrations, check-in, and communication with participants and guardians."
-    ]
+      "Handled registrations, check-in, and communication with participants and guardians.",
+    ],
   },
   {
-    role: "President – College of Business Society (COBS)",
-    company: "University of Bahrain",
-    location: "Sakhir, Bahrain",
-    period: "2023 – Present",
+    role: "Salesperson",
+    company: "METALS INTERNATIONAL W.L.L",
+    date: "Jan 2024 – July 2025",
     bullets: [
-      "Led the College of Business Society representing thousands of students.",
-      "Designed and executed events such as Carnival COBS, Ramadan tournaments, and workshops.",
-      "Built and managed cross-functional student teams for marketing, logistics, and sponsorship.",
-      "Worked closely with Dean of Student Affairs and faculty on approvals and budgeting."
-    ]
+      "Prepared quotations and sales orders for customers.",
+      "Communicated with clients and handled follow-ups.",
+      "Coordinated with purchasing and accounts teams for smooth transactions.",
+    ],
   },
   {
-    role: "Administrative, Sales & Operations Assistant",
-    company: "Family Business – Trading & Services",
-    location: "Manama, Bahrain",
-    period: "2021 – 2023",
+    role: "Purchasing Assistant",
+    company: "METALS INTERNATIONAL W.L.L",
+    date: "Jan 2023 – Dec 2023",
     bullets: [
-      "Supported day-to-day office operations, documentation, and customer follow-up.",
-      "Assisted in sales, order processing, and basic purchasing coordination.",
-      "Maintained records, handled phone/email inquiries, and ensured smooth workflows."
-    ]
+      "Prepared purchase orders and tracked supplier deliveries.",
+      "Maintained vendor records and coordinated with suppliers.",
+      "Supported inventory checks and ensured timely procurement.",
+    ],
   },
   {
     role: "Accounts Assistant",
-    company: "Metals International W.L.L",
-    location: "Bahrain",
-    period: "Jan 2023 – Dec 2023",
+    company: "METALS INTERNATIONAL W.L.L",
+    date: "Jan 2022 – Dec 2022",
     bullets: [
-      "Processed invoices and tracked payments with accuracy and attention to detail.",
-      "Supported preparation of simple financial reports and reconciliations.",
-      "Organized accounting documents and assisted with daily office tasks."
-    ]
-  }
+      "Processed invoices, tracked payments, and maintained accurate records.",
+      "Assisted with preparing financial reports and reconciling basic accounts.",
+      "Supported daily office tasks and organized accounting documents.",
+    ],
+  },
+  {
+    role: "Project Coordinator",
+    company: "MALAEB",
+    date: "July 2023 – Oct 2023",
+    bullets: [
+      "Organized football matches and tournaments at multiple venues across Bahrain.",
+      "Managed bookings, schedules, and on-site logistics for teams and officials.",
+      "Coordinated with venues, partners, and teams to ensure smooth event operations.",
+    ],
+  },
+  {
+    role: "President",
+    company: "College of Business Administration Society — University of Bahrain",
+    date: "Nov 2024 – Present",
+    bullets: [
+      "Lead and led a student society of 100+ active members.",
+      "Plan and organize cultural, awareness, and entertainment events on and off campus.",
+      "Coordinate partnerships and sponsorships to support society initiatives.",
+    ],
+  },
 ];
 
-const ExperienceSection: React.FC = () => {
+export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="relative max-w-5xl mx-auto py-20 px-4 space-y-10"
+      className="max-w-5xl mx-auto px-4 py-20 text-white space-y-12"
     >
-      <header className="space-y-3">
-        <p className="text-sm uppercase tracking-[0.2em] text-white/40">
-          Experience
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold italic">
-          Professional & leadership experience.
-        </h2>
-        <p className="text-sm md:text-base text-white/60 max-w-2xl">
-          A mix of youth leadership programs, student leadership, and
-          administrative work across Bahrain and Saudi Arabia.
-        </p>
-      </header>
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+        Professional Experience
+      </h2>
 
-      <div className="border-l border-white/10 space-y-8">
-        {experience.map((item, index) => (
-          <article key={index} className="relative pl-6 pb-6 group">
-            {/* نقطة التايم لاين */}
-            <span className="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-white group-hover:scale-110 transition-transform" />
+      <div className="relative border-l border-white/20 pl-8 space-y-12">
+        {experiences.map((exp, i) => (
+          <div key={i} className="relative">
+            {/* Dot */}
+            <span className="absolute -left-4 top-1.5 w-3 h-3 bg-white rounded-full shadow-lg"></span>
 
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-              <h3 className="text-lg md:text-xl font-semibold">
-                {item.role}
+            {/* Header row */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+              <h3 className="text-xl font-semibold">
+                {exp.role} —{" "}
+                <span className="text-white/70">{exp.company}</span>
               </h3>
-              <span className="text-xs md:text-sm text-white/50">
-                {item.period}
-              </span>
+              <p className="text-white/50 text-sm mt-1 md:mt-0">{exp.date}</p>
             </div>
 
-            <p className="text-sm md:text-base text-white/70">
-              {item.company} — {item.location}
-            </p>
-
-            <ul className="mt-3 space-y-1.5 text-sm text-white/70 list-disc pl-4">
-              {item.bullets.map((b, i) => (
-                <li key={i}>{b}</li>
+            {/* Bullet points */}
+            <ul className="list-disc pl-5 mt-3 space-y-1 text-white/80">
+              {exp.bullets.map((b, idx) => (
+                <li key={idx}>{b}</li>
               ))}
             </ul>
-          </article>
+          </div>
         ))}
       </div>
     </section>
   );
-};
+}
 
 export default ExperienceSection;
