@@ -3,7 +3,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import ProjectsSection from '@/components/ProjectsSection';
-import ExperienceSection from "@/components/ui/ExperienceSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import EducationTimeline from '@/components/EducationTimeline';
 import TechMarquee from '@/components/TechMarquee';
 import BlogSection from '@/components/BlogSection';
