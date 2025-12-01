@@ -19,6 +19,17 @@ const experiences: Experience[] = [
     ],
   },
   {
+      role: "President",
+    company:
+      "College of Business Administration Society — University of Bahrain",
+    date: "Nov 2024 – Present",
+    bullets: [
+      "Lead and lead a student society of 100+ active members.",
+      "Plan and organize cultural, awareness, and entertainment events on and off campus.",
+      "Coordinate partnerships and sponsorships to support society initiatives.",
+    ],
+  },
+];
     role: "Salesperson",
     company: "METALS INTERNATIONAL W.L.L",
     date: "Jan 2024 – July 2025",
@@ -58,18 +69,7 @@ const experiences: Experience[] = [
       "Coordinated with venues, partners, and teams to ensure smooth event operations.",
     ],
   },
-  {
-    role: "President",
-    company:
-      "College of Business Administration Society — University of Bahrain",
-    date: "Nov 2024 – Present",
-    bullets: [
-      "Lead and lead a student society of 100+ active members.",
-      "Plan and organize cultural, awareness, and entertainment events on and off campus.",
-      "Coordinate partnerships and sponsorships to support society initiatives.",
-    ],
-  },
-];
+  ];
 
 const ExperienceSection: React.FC = () => {
   return (
