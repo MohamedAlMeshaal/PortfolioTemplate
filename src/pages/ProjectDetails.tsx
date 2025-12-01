@@ -86,7 +86,7 @@ export default function ProjectDetails() {
           ) : null}
         </header>
 
-              {/* Media section */}
+                  {/* Media section */}
       {(project.images && project.images.length > 0) ||
       (project.videos && project.videos.length > 0) ? (
         <section className="space-y-8 mt-10">
@@ -95,31 +95,22 @@ export default function ProjectDetails() {
               <h2 className="text-lg md:text-xl font-semibold mb-4">
                 Event Gallery
               </h2>
-            <section className="space-y-8 mt-10">
-  {project.images && project.images.length > 0 && (
-    <div>
-      <h2 className="text-lg md:text-xl font-semibold mb-4">
-        Event Gallery
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {project.images.map((src, i) => (
-          <button
-            key={i}
-            type="button"
-            onClick={() => setActiveImage(src)}
-            className="group aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900 focus:outline-none"
-          >
-            <img
-              src={src}
-              alt={`${project.title} ${i + 1}`}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-          </button>
-        ))}
-      </div>
-    </div>
-  )}
-</section>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {project.images.map((src, i) => (
+                  <div
+                    key={i}
+                    className="aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900"
+                  >
+                    <img
+                      src={src}
+                      alt={`${project.title} ${i + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {project.videos && project.videos.length > 0 && (
             <div>
@@ -130,13 +121,9 @@ export default function ProjectDetails() {
                 {project.videos.map((src, i) => (
                   <div
                     key={i}
-                    className="aspect-video rounded-xl overflow-hidden border border-white/10 bg-neutral-900"
+                    className="aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900"
                   >
-                    <video
-                      src={src}
-                      controls
-                      className="w-full h-full object-cover"
-                    />
+                    <video src={src} controls className="w-full h-full" />
                   </div>
                 ))}
               </div>
