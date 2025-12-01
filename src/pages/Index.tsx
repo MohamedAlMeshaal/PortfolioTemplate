@@ -2,10 +2,10 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
-import TechMarquee from '@/components/TechMarquee';
 import ProjectsSection from '@/components/ProjectsSection';
+import ExperienceSection from "@/components/ui/ExperienceSection";
 import EducationTimeline from '@/components/EducationTimeline';
-import CompetitiveStats from '@/components/CompetitiveStats';
+import TechMarquee from '@/components/TechMarquee';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 
