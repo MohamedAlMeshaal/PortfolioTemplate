@@ -10,7 +10,7 @@ interface Experience {
 const experiences: Experience[] = [
   {
     role: "Operations Coordinator",
-    company: "The Leader | Youth Leadership Programs",
+    company: "Upturn Leader | Youth Leadership Programs",
     date: "July 2025 – Present",
     bullets: [
       "Coordinated large-scale leadership bootcamps for 70+ participants per cohort.",
