@@ -22,7 +22,7 @@ const experiences: Experience[] = [
   {
     role: "President",
     company:
-      "College of Business Administration Society — University of Bahrain",
+      "College of Business Administration Society | University of Bahrain",
     date: "Nov 2024 – Present",
     bullets: [
       "Lead and manage a student society of 100+ active members.",
