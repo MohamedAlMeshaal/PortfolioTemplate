@@ -1,11 +1,11 @@
-
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
-import ProjectsSection from '@/components/ProjectsSection';
-import ExperienceSection from "@/components/ExperienceSection";
-import EducationTimeline from '@/components/EducationTimeline';
 import TechMarquee from '@/components/TechMarquee';
+import ExperienceSection from '@/components/ExperienceSection';
+import ProjectsSection from '@/components/ProjectsSection';
+import EducationTimeline from '@/components/EducationTimeline';
+import CompetitiveStats from '@/components/CompetitiveStats';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 
@@ -114,14 +114,15 @@ const Index: React.FC = () => {
         </header>
         
         <main className="pt-16 relative z-10">
-          <HeroSection />
-          <TechMarquee />
-          <ProjectsSection />
-          <EducationTimeline />
-          <CompetitiveStats />
-          <BlogSection />
-          <ContactSection />
-        </main>
+  <HeroSection />
+  <TechMarquee />
+  <ExperienceSection />
+  <ProjectsSection />
+  <EducationTimeline />
+  <CompetitiveStats />
+  <BlogSection />
+  <ContactSection />
+</main>
         
         <footer className="py-12 px-4 border-t border-white/10 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
