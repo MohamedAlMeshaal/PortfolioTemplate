@@ -8,6 +8,8 @@ type ExperienceItem = {
   bullets: string[];
 };
 
+import React from "react";
+
 const experiences = [
   {
     role: "Operations Coordinator",
