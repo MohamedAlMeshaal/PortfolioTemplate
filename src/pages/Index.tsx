@@ -5,7 +5,6 @@ import TechMarquee from '@/components/TechMarquee';
 import ExperienceSection from '@/components/ExperienceSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import EducationTimeline from '@/components/EducationTimeline';
-import CompetitiveStats from '@/components/CompetitiveStats';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 
@@ -119,7 +118,6 @@ const Index: React.FC = () => {
   <ExperienceSection />
   <ProjectsSection />
   <EducationTimeline />
-  <CompetitiveStats />
   <BlogSection />
   <ContactSection />
 </main>
