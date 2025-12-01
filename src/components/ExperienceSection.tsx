@@ -18,18 +18,20 @@ const experiences: Experience[] = [
       "Handled registrations, check-in, and communication with participants and guardians.",
     ],
   },
+
   {
-      role: "President",
+    role: "President",
     company:
       "College of Business Administration Society — University of Bahrain",
     date: "Nov 2024 – Present",
     bullets: [
-      "Lead and lead a student society of 100+ active members.",
+      "Lead and manage a student society of 100+ active members.",
       "Plan and organize cultural, awareness, and entertainment events on and off campus.",
       "Coordinate partnerships and sponsorships to support society initiatives.",
     ],
   },
-];
+
+  {
     role: "Salesperson",
     company: "METALS INTERNATIONAL W.L.L",
     date: "Jan 2024 – July 2025",
@@ -39,6 +41,7 @@ const experiences: Experience[] = [
       "Coordinated with purchasing and accounts teams for smooth transactions.",
     ],
   },
+
   {
     role: "Purchasing Assistant",
     company: "METALS INTERNATIONAL W.L.L",
@@ -49,6 +52,7 @@ const experiences: Experience[] = [
       "Supported inventory checks and ensured timely procurement.",
     ],
   },
+
   {
     role: "Accounts Assistant",
     company: "METALS INTERNATIONAL W.L.L",
@@ -59,6 +63,7 @@ const experiences: Experience[] = [
       "Supported daily office tasks and organized accounting documents.",
     ],
   },
+
   {
     role: "Project Coordinator",
     company: "MALAEB",
@@ -69,7 +74,7 @@ const experiences: Experience[] = [
       "Coordinated with venues, partners, and teams to ensure smooth event operations.",
     ],
   },
-  ];
+];
 
 const ExperienceSection: React.FC = () => {
   return (
@@ -87,7 +92,7 @@ const ExperienceSection: React.FC = () => {
             {/* Timeline dot */}
             <span className="absolute -left-4 top-1.5 w-3 h-3 bg-white rounded-full shadow-lg" />
 
-            {/* Header row */}
+            {/* Header */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
               <h3 className="text-xl font-semibold">
                 {exp.role} —{" "}
@@ -96,7 +101,6 @@ const ExperienceSection: React.FC = () => {
               <p className="text-white/50 text-sm mt-1 md:mt-0">{exp.date}</p>
             </div>
 
-            {/* Bullet points */}
             <ul className="list-disc pl-5 mt-3 space-y-1 text-white/80">
               {exp.bullets.map((b, idx) => (
                 <li key={idx}>{b}</li>
