@@ -1,15 +1,9 @@
 import { useParams, Link } from "react-router-dom";
-import { useState } from "react";
-// جرّب هذا أولاً، إذا عطاك خطأ في alias "@", استبدله بالسطر اللي بعده
 import { projectsData } from "@/lib/projectsData";
-// لو طلع خطأ، علّق السطر اللي فوق واستخدم هذا:
-// import { projectsData } from "../lib/projectsData";
 
 export default function ProjectDetails() {
   const { slug } = useParams<{ slug: string }>();
   const project = projectsData.find((p) => p.slug === slug);
-
-    const [activeImage, setActiveImage] = useState<string | null>(null);
 
   if (!project) {
     return (
@@ -20,12 +14,18 @@ export default function ProjectDetails() {
             to="/#projects"
             className="text-sm text-white/70 hover:text-white underline"
           >
-            ← Back to projects
+            ← Back to Featured Projects
           </Link>
         </div>
       </main>
     );
   }
+
+  const images = (project as any).images as string[] | undefined;
+  const videos = (project as any).videos as string[] | undefined;
+
+  const hasImages = Array.isArray(images) && images.length > 0;
+  const hasVideos = Array.isArray(videos) && videos.length > 0;
 
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
@@ -39,7 +39,6 @@ export default function ProjectDetails() {
             <span className="text-lg">←</span>
             <span>Back to Featured Projects</span>
           </Link>
-
           {project.date && (
             <span className="text-xs md:text-sm px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70">
               {project.date}
@@ -66,7 +65,7 @@ export default function ProjectDetails() {
 
           {project.outcome && (
             <p className="text-sm md:text-base text-white/80">
-              <span className="text-white/50">Key Outcomes:&nbsp;</span>
+              <span className="text-white/60">Key Outcomes:&nbsp;</span>
               {project.outcome}
             </p>
           )}
@@ -86,52 +85,56 @@ export default function ProjectDetails() {
           ) : null}
         </header>
 
-                  {/* Media section */}
-      {(project.images && project.images.length > 0) ||
-      (project.videos && project.videos.length > 0) ? (
-        <section className="space-y-8 mt-10">
-          {project.images && project.images.length > 0 && (
-            <div>
-              <h2 className="text-lg md:text-xl font-semibold mb-4">
-                Event Gallery
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {project.images.map((src, i) => (
-                  <div
-                    key={i}
-                    className="aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900"
-                  >
-                    <img
-                      src={src}
-                      alt={`${project.title} ${i + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
+        {/* Media section */}
+        {(hasImages || hasVideos) && (
+          <section className="space-y-8 mt-10">
+            {hasImages && (
+              <div>
+                <h2 className="text-lg md:text-xl font-semibold mb-4">
+                  Event Gallery
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  {images!.map((src, i) => (
+                    <div
+                      key={i}
+                      className="aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900"
+                    >
+                      <img
+                        src={src}
+                        alt={`${project.title} ${i + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {project.videos && project.videos.length > 0 && (
-            <div>
-              <h2 className="text-lg md:text-xl font-semibold mb-4">
-                Event Highlight Videos
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {project.videos.map((src, i) => (
-                  <div
-                    key={i}
-                    className="aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900"
-                  >
-                    <video src={src} controls className="w-full h-full" />
-                  </div>
-                ))}
+            {hasVideos && (
+              <div>
+                <h2 className="text-lg md:text-xl font-semibold mb-4">
+                  Event Highlight Videos
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {videos!.map((src, i) => (
+                    <div
+                      key={i}
+                      className="aspect-video overflow-hidden rounded-xl border border-white/10 bg-neutral-900"
+                    >
+                      <video
+                        src={src}
+                        controls
+                        className="w-full h-full"
+                        preload="metadata"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
-        </section>
-      ) : null}
-            </div>
+            )}
+          </section>
+        )}
+      </div>
     </main>
   );
 }
