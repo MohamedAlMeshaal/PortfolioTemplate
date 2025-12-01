@@ -1,14 +1,6 @@
 import React from "react";
 
-type ExperienceItem = {
-  role: string;
-  organization: string;
-  period: string;
-  location?: string;
-  points: string[];
-};
-
-const experiences: ExperienceItem[] = [
+const experiences = [
   {
     role: "President – College of Business Administration Society (COBS)",
     organization: "University of Bahrain",
