@@ -33,7 +33,7 @@ const experiences: Experience[] = [
 
   {
     role: "Salesperson",
-    company: "Metals International W.L.L",
+    company: "Metals International",
     date: "Jan 2024 – July 2025",
     bullets: [
       "Prepared quotations and sales orders for customers.",
@@ -44,7 +44,7 @@ const experiences: Experience[] = [
 
   {
     role: "Purchasing Assistant",
-    company: "Metals International W.L.L",
+    company: "Metals International",
     date: "Jan 2023 – Dec 2023",
     bullets: [
       "Prepared purchase orders and tracked supplier deliveries.",
@@ -55,7 +55,7 @@ const experiences: Experience[] = [
 
   {
     role: "Accounts Assistant",
-    company: "Metals International W.L.L",
+    company: "Metals International",
     date: "Jan 2022 – Dec 2022",
     bullets: [
       "Processed invoices, tracked payments, and maintained accurate records.",
