@@ -1,16 +1,13 @@
 import React from "react";
 
-type ExperienceItem = {
-  company: string;
+interface Experience {
   role: string;
-  location: string;
-  period: string;
+  company: string;
+  date: string;
   bullets: string[];
-};
+}
 
-import React from "react";
-
-const experiences = [
+const experiences: Experience[] = [
   {
     role: "Operations Coordinator",
     company: "The Leader | Youth Leadership Programs",
@@ -63,17 +60,18 @@ const experiences = [
   },
   {
     role: "President",
-    company: "College of Business Administration Society — University of Bahrain",
+    company:
+      "College of Business Administration Society — University of Bahrain",
     date: "Nov 2024 – Present",
     bullets: [
-      "Lead and led a student society of 100+ active members.",
+      "Lead and lead a student society of 100+ active members.",
       "Plan and organize cultural, awareness, and entertainment events on and off campus.",
       "Coordinate partnerships and sponsorships to support society initiatives.",
     ],
   },
 ];
 
-export default function ExperienceSection() {
+const ExperienceSection: React.FC = () => {
   return (
     <section
       id="experience"
@@ -86,8 +84,8 @@ export default function ExperienceSection() {
       <div className="relative border-l border-white/20 pl-8 space-y-12">
         {experiences.map((exp, i) => (
           <div key={i} className="relative">
-            {/* Dot */}
-            <span className="absolute -left-4 top-1.5 w-3 h-3 bg-white rounded-full shadow-lg"></span>
+            {/* Timeline dot */}
+            <span className="absolute -left-4 top-1.5 w-3 h-3 bg-white rounded-full shadow-lg" />
 
             {/* Header row */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -109,6 +107,6 @@ export default function ExperienceSection() {
       </div>
     </section>
   );
-}
+};
 
 export default ExperienceSection;
