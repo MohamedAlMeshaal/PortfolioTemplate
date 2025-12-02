@@ -101,10 +101,12 @@ const Index: React.FC = () => {
                 </li>
                 <li>
                   <a
-  href="#"
-  className="cta-button-premium text-sm px-4 py-1 cursor-not-allowed opacity-70"
+  href="/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="cta-button-premium text-sm px-4 py-1"
 >
-  Resume (Soon)
+  Resume
 </a>
                 </li>
               </ul>
