@@ -41,17 +41,6 @@ const HeroSection: React.FC = () => {
           أهلاً بكم
         </motion.span>
 
-        {/* EN Welcome */}
-        <motion.span
-          className="block hero-text-gradient"
-          initial="hidden"
-          animate="visible"
-          custom={1}
-          variants={textVariants}
-        >
-          Welcome
-        </motion.span>
-
         {/* AR Name */}
         <motion.span
           className="block"
@@ -62,18 +51,6 @@ const HeroSection: React.FC = () => {
         >
           أنا محمد سائد المشعل
         </motion.span>
-
-        {/* EN Name */}
-        <motion.span
-          className="block hero-text-gradient"
-          initial="hidden"
-          animate="visible"
-          custom={3}
-          variants={textVariants}
-        >
-          I’m Mohamed Saed Al Meshaal
-        </motion.span>
-      </motion.h1>
 
       {/* DESCRIPTION */}
       <motion.p
