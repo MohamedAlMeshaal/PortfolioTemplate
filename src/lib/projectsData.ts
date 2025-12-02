@@ -65,33 +65,31 @@ export const projectsData: ProjectDetails[] = [
     images: [],
   },
   {
-  slug: "cobs-carnival-2",
-  title: "COBS Carnival 2",
-  date: "October 23, 2025",
-  description:
-    "Second edition: handmade games, popcorn, cotton candy, face painting, and music.",
-  role: "General Leader / Executive Director",
-  outcome:
-    "100+ volunteers · 2,000+ attendees · major sponsorships · media coverage · higher society recognition",
-  tags: [
-    "Event Design",
-    "Leadership",
-    "Operations",
-    "Volunteers",
-    "Sponsorship",
-    "Media Coverage",
-  ],
+    slug: "cobs-carnival-2",
+    title: "COBS Carnival 2",
+    date: "October 23, 2025",
+    description:
+      "Second edition carnival for the College of Business — handmade games, popcorn, cotton candy, face painting, and live vibes created fully by the student team.",
+    role: "General Leader / Executive Director",
+    outcome:
+      "100+ volunteers · 2,000+ attendees · major sponsorships · strong media coverage · higher recognition inside the university.",
+    tags: [
+      "Event Design",
+      "Leadership",
+      "Operations",
+      "Volunteers",
+      "Sponsorship",
+      "Media Coverage",
+    ],
+    images: [
+      "/cobs-carnival2-1.jpeg",
+      "/cobs-carnival2-2.jpeg",
+      "/cobs-carnival2-3.jpeg",
+      "/cobs-carnival2-4.jpeg",
+      "/cobs-carnival2-5.jpeg",
+    ],
+    videos: ["/cobs-carnival2-video1.mp4", "/cobs-carnival2-video2.mp4"],
+  },
+];
 
-  images: [
-    "/cobs-carnival2-1.jpeg",
-    "/cobs-carnival2-2.jpeg",
-    "/cobs-carnival2-3.jpeg",
-    "/cobs-carnival2-4.jpeg",
-    "/cobs-carnival2-5.jpeg",
-  ],
-
-  videos: [
-    "/cobs-carnival2-video1.mp4.mp4",
-    "/cobs-carnival2-video2.mp4.mp4",
-  ],
-},
+export default projectsData;
