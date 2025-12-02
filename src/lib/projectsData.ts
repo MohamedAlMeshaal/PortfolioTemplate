@@ -82,11 +82,12 @@ export const projectsData: ProjectDetails[] = [
       "Media Coverage",
     ],
     images: [
-      "/cobs-carnival2-1.jpeg.jpeg",
       "/cobs-carnival2-2.jpeg.jpeg",
       "/cobs-carnival2-3.jpeg.jpeg",
       "/cobs-carnival2-4.jpeg.jpeg",
       "/cobs-carnival2-5.jpeg.jpeg",
+      "/cobs-carnival2-6.jpeg.jpeg",
+      "/cobs-carnival2-7.jpeg.jpeg",
     ],
     videos: ["/cobs-carnival2-video1.mp4.mp4", "/cobs-carnival2-video2.mp4.mp4"],
   },
