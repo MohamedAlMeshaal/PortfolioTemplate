@@ -100,12 +100,12 @@ const Index: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="/resume.pdf" 
-                    className="cta-button-premium text-sm px-4 py-1"
-                  >
-                    Resume
-                  </a>
+                  <a
+  href="#"
+  className="cta-button-premium text-sm px-4 py-1 cursor-not-allowed opacity-70"
+>
+  Resume (Soon)
+</a>
                 </li>
               </ul>
             </nav>
