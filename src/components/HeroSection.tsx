@@ -58,13 +58,19 @@ const HeroSection: React.FC = () => {
 
       {/* DESCRIPTION */}
       <motion.p
-        className="text-xl md:text-2xl font-light italic text-white/80 leading-relaxed max-w-3xl mx-auto space-y-2 mt-10"
+        className="text-xl md:text-2xl font-light italic text-white/80 leading-relaxed max-w-3xl mx-auto space-y-4 mt-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
-        <span className="block">
+        {/* AR Description */}
+        <span className="block mb-2">
           هذه الصفحة تجمع أفضل ما صنعت: أعمال، مبادرات، تجارب، ومحطات شكّلت رحلتي وصنعت فرقاً حقيقياً.
+        </span>
+
+        {/* EN Description */}
+        <span className="block">
+          This page brings together the work, initiatives, and experiences that shaped my journey and created meaningful impact.
         </span>
       </motion.p>
 
