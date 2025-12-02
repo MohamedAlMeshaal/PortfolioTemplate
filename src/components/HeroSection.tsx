@@ -82,7 +82,7 @@ const HeroSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.8 }}
       >
-        استعراض المشاريع <ArrowRight size={20} />
+        View Projects <ArrowRight size={20} />
       </motion.a>
 
     </section>
