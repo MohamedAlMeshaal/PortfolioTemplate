@@ -110,7 +110,7 @@ export const projectsData: ProjectDetails[] = [
   },
   {
     slug: "cobs-inspiring-talk",
-    title: "Guests of COBS – A Talk with an Inspiring Figure",
+    title: "Guests of COBS",
     date: "October 12, 2025",
     description:
       "Open talk with Mr. Suheil Al-Qusaibi on challenges and lessons from his entrepreneurial journey.",
