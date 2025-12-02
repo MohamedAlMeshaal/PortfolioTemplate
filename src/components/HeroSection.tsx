@@ -57,41 +57,79 @@ const HeroSection: React.FC = () => {
             custom={0}
             variants={textVariants}
           >
-            Hello, I'm Mohamed Saed Meshaal —
-          </motion.span>{" "}
-          <motion.span
-            className="inline-block hero-text-gradient"
-            initial="hidden"
-            animate="visible"
-            custom={1}
-            variants={textVariants}
-          >
-            Student leader & operations coordinator — building initiatives, leading teams, and creating impact.
-          </motion.span>
-        </motion.h1>
+<motion.h1
+  className="text-4xl md:text-6xl font-extrabold text-white leading-tight space-y-4"
+  initial="hidden"
+  animate="visible"
+  variants={containerVariants}
+>
 
-        <motion.p
-          className="text-xl md:text-2xl font-light italic text-white/80 mb-10 leading-relaxed max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-        >
-          Combining leadership and operations to build impact that lasts.
-        </motion.p>
+  {/* AR: Welcome Heading */}
+  <motion.span
+    className="block"
+    initial="hidden"
+    animate="visible"
+    custom={0}
+    variants={textVariants}
+  >
+    أهلاً بكم
+  </motion.span>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-        >
-          <a
-            href="#projects"
-            className="cta-button-premium group inline-flex items-center gap-2"
-          >
-            <span>View Projects</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </motion.div>
+  {/* EN: Welcome Heading */}
+  <motion.span
+    className="block hero-text-gradient"
+    initial="hidden"
+    animate="visible"
+    custom={1}
+    variants={textVariants}
+  >
+    Welcome
+  </motion.span>
+
+  {/* AR: Name */}
+  <motion.span
+    className="block"
+    initial="hidden"
+    animate="visible"
+    custom={2}
+    variants={textVariants}
+  >
+    أنا محمد سائد المشعل
+  </motion.span>
+
+  {/* EN: Name */}
+  <motion.span
+    className="block hero-text-gradient"
+    initial="hidden"
+    animate="visible"
+    custom={3}
+    variants={textVariants}
+  >
+    I’m Mohamed Saed Al Meshaal
+  </motion.span>
+</motion.h1>
+
+
+
+{/* Description Paragraphs */}
+<motion.p
+  className="text-xl md:text-2xl font-light italic text-white/80 mb-10 leading-relaxed max-w-3xl mx-auto space-y-2"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5, duration: 0.8 }}
+>
+
+  {/* AR Description */}
+  <span className="block mb-2">
+    هذه الصفحة تجمع أفضل ما صنعت: أعمال، مبادرات، تجارب، ومحطات شكّلت رحلتي وصنعت فرقاً حقيقياً.
+  </span>
+
+  {/* EN Description */}
+  <span className="block">
+    This page showcases the work, initiatives, experiences, and milestones that shaped my journey and created real impact.
+  </span>
+
+</motion.p>
       </div>
     </section>
   );
