@@ -12,6 +12,62 @@ export type ProjectDetails = {
 };
 
 export const projectsData: ProjectDetails[] = [
+    // 1) ورشة تعريف جمعية كلية إدارة الأعمال
+  {
+    slug: "cobs-intro-workshop-2024",
+    title: "COBS Introductory Workshop – University of Bahrain",
+    date: "November 24, 2024",
+    description:
+      "Introductory workshop at the University of Bahrain to present the College of Business Administration Society: who we are, our vision, mission, and how students can be part of the journey.",
+    role: "Speaker & COBS President",
+    outcome:
+      "80+ interested students attended · clarified the society’s identity and role · increased awareness and applications to join COBS.",
+    tags: [
+      "Workshop",
+      "Student Leadership",
+      "Community Engagement",
+      "Public Speaking",
+      "University Life",
+    ],
+  },
+
+  // 2) فعالية يوم المرأة البحرينية
+  {
+    slug: "cobs-bahraini-womens-day-2024",
+    title: "Bahraini Women’s Day – COBS Celebration",
+    date: "December 1, 2024",
+    description:
+      "Led the College of Business Administration Society in organizing a special event for Bahraini Women’s Day, celebrating the achievements of Bahraini women and highlighting their impact in society and business.",
+    role: "General Leader – Event Director",
+    outcome:
+      "Created a respectful and inspiring celebration · strengthened the society’s connection with female students · highlighted role models from Bahraini women.",
+    tags: [
+      "Event Design",
+      "Cultural Event",
+      "Community Engagement",
+      "Student Leadership",
+    ],
+  },
+
+  // 3) زيارة مصرف البحرين المركزي
+  {
+    slug: "cobs-cbb-visit-2024",
+    title: "Central Bank of Bahrain Visit – Money Flow & Finance",
+    date: "December 3, 2024",
+    description:
+      "Organized and led a COBS delegation visit to the Central Bank of Bahrain to learn about money flow, financial systems, and how the national banking ecosystem operates.",
+    role: "COBS Delegation Leader",
+    outcome:
+      "Introduced members to real-world finance and monetary policy · first exposure to banking operations, investment, and physical vs. digital currencies.",
+    tags: [
+      "Industry Visit",
+      "Finance",
+      "Banking",
+      "Experiential Learning",
+      "Career Awareness",
+    ],
+  },
+
   {
     slug: "cobs-walhana",
     title: "Welcome Back Event – Walhana Alaikom",
@@ -92,62 +148,6 @@ export const projectsData: ProjectDetails[] = [
     videos: ["/cobs-carnival2-video1.mp4.mp4", "/cobs-carnival2-video2.mp4.mp4"],
   },
   
-  // 1) ورشة تعريف جمعية كلية إدارة الأعمال
-  {
-    slug: "cobs-intro-workshop-2024",
-    title: "COBS Introductory Workshop – University of Bahrain",
-    date: "November 24, 2024",
-    description:
-      "Introductory workshop at the University of Bahrain to present the College of Business Administration Society: who we are, our vision, mission, and how students can be part of the journey.",
-    role: "Speaker & COBS President",
-    outcome:
-      "80+ interested students attended · clarified the society’s identity and role · increased awareness and applications to join COBS.",
-    tags: [
-      "Workshop",
-      "Student Leadership",
-      "Community Engagement",
-      "Public Speaking",
-      "University Life",
-    ],
-  },
-
-  // 2) فعالية يوم المرأة البحرينية
-  {
-    slug: "cobs-bahraini-womens-day-2024",
-    title: "Bahraini Women’s Day – COBS Celebration",
-    date: "December 1, 2024",
-    description:
-      "Led the College of Business Administration Society in organizing a special event for Bahraini Women’s Day, celebrating the achievements of Bahraini women and highlighting their impact in society and business.",
-    role: "General Leader – Event Director",
-    outcome:
-      "Created a respectful and inspiring celebration · strengthened the society’s connection with female students · highlighted role models from Bahraini women.",
-    tags: [
-      "Event Design",
-      "Cultural Event",
-      "Community Engagement",
-      "Student Leadership",
-    ],
-  },
-
-  // 3) زيارة مصرف البحرين المركزي
-  {
-    slug: "cobs-cbb-visit-2024",
-    title: "Central Bank of Bahrain Visit – Money Flow & Finance",
-    date: "December 3, 2024",
-    description:
-      "Organized and led a COBS delegation visit to the Central Bank of Bahrain to learn about money flow, financial systems, and how the national banking ecosystem operates.",
-    role: "COBS Delegation Leader",
-    outcome:
-      "Introduced members to real-world finance and monetary policy · first exposure to banking operations, investment, and physical vs. digital currencies.",
-    tags: [
-      "Industry Visit",
-      "Finance",
-      "Banking",
-      "Experiential Learning",
-      "Career Awareness",
-    ],
-  },
-
   // 4) زيارة خليجي بنك
   {
     slug: "cobs-khaleeji-bank-visit-2024",
