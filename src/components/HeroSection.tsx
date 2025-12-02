@@ -17,7 +17,10 @@ const HeroSection: React.FC = () => {
 
       {/* Background Lighting */}
       <div className="corner-light-premium"></div>
-      <div className="corner-light-premium" style={{ right: 0, left: "auto", transform: "rotate(90deg)" }}></div>
+      <div
+        className="corner-light-premium"
+        style={{ right: 0, left: "auto", transform: "rotate(90deg)" }}
+      ></div>
 
       {/* Central Glow */}
       <div className="absolute w-[800px] h-[800px] rounded-full bg-radial-glow-premium opacity-60 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
@@ -43,14 +46,15 @@ const HeroSection: React.FC = () => {
 
         {/* AR Name */}
         <motion.span
-          className="block"
+          className="block hero-text-gradient"
           initial="hidden"
           animate="visible"
-          custom={2}
+          custom={1}
           variants={textVariants}
         >
           أنا محمد سائد المشعل
         </motion.span>
+      </motion.h1>
 
       {/* DESCRIPTION */}
       <motion.p
@@ -59,14 +63,8 @@ const HeroSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
-        {/* AR Description */}
-        <span className="block mb-2">
-          هذه الصفحة تجمع أفضل ما صنعت: أعمال، مبادرات، تجارب، ومحطات شكّلت رحلتي وصنعت فرقاً حقيقياً.
-        </span>
-
-        {/* EN Description */}
         <span className="block">
-          This page brings together the work, experiences, initiatives, and milestones that shaped my journey and created real impact.
+          هذه الصفحة تجمع أفضل ما صنعت: أعمال، مبادرات، تجارب، ومحطات شكّلت رحلتي وصنعت فرقاً حقيقياً.
         </span>
       </motion.p>
 
@@ -78,7 +76,7 @@ const HeroSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.8 }}
       >
-        View Projects <ArrowRight size={20} />
+        استعراض المشاريع <ArrowRight size={20} />
       </motion.a>
 
     </section>
