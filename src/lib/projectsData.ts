@@ -15,7 +15,7 @@ export const projectsData: ProjectDetails[] = [
     // 1) ورشة تعريف جمعية كلية إدارة الأعمال
   {
     slug: "cobs-intro-workshop-2024",
-    title: "COBS Introductory Workshop – University of Bahrain",
+    title: "COBS Introductory",
     date: "November 24, 2024",
     description:
       "Introductory workshop at the University of Bahrain to present the College of Business Administration Society: who we are, our vision, mission, and how students can be part of the journey.",
@@ -34,7 +34,7 @@ export const projectsData: ProjectDetails[] = [
   // 2) فعالية يوم المرأة البحرينية
   {
     slug: "cobs-bahraini-womens-day-2024",
-    title: "Bahraini Women’s Day – COBS Celebration",
+    title: "Bahraini Women’s Day",
     date: "December 1, 2024",
     description:
       "Led the College of Business Administration Society in organizing a special event for Bahraini Women’s Day, celebrating the achievements of Bahraini women and highlighting their impact in society and business.",
@@ -52,7 +52,7 @@ export const projectsData: ProjectDetails[] = [
   // 3) زيارة مصرف البحرين المركزي
   {
     slug: "cobs-cbb-visit-2024",
-    title: "Central Bank of Bahrain Visit – Money Flow & Finance",
+    title: "Central Bank of Bahrain Visit",
     date: "December 3, 2024",
     description:
       "Organized and led a COBS delegation visit to the Central Bank of Bahrain to learn about money flow, financial systems, and how the national banking ecosystem operates.",
@@ -70,7 +70,7 @@ export const projectsData: ProjectDetails[] = [
 
   {
     slug: "cobs-walhana",
-    title: "Welcome Back Event – Walhana Alaikom",
+    title: "Walhana Alaikom Event",
     date: "February 27, 2025",
     description:
       "Ramadan-themed welcome event for semester 2024/2. Re-energized students and celebrated community spirit.",
@@ -151,7 +151,7 @@ export const projectsData: ProjectDetails[] = [
   // 4) زيارة خليجي بنك
   {
     slug: "cobs-khaleeji-bank-visit-2024",
-    title: "Khaleeji Bank Visit – Bridging Academia and Industry",
+    title: "Khaleeji Bank Visit",
     date: "October 20, 2024",
     description:
       "Coordinated a focused visit for COBS members to Khaleeji Bank, exploring daily operations across departments and understanding how banking roles connect to what students study in class.",
