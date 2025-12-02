@@ -65,12 +65,12 @@ const HeroSection: React.FC = () => {
       >
         {/* AR Description */}
         <span className="block mb-2">
-          .هذه الصفحة تجمع أفضل ما صنعت من أعمال، مبادرات، تجارب، ومحطات شكّلت رحلتي وصنعت فرقاً حقيقياً
+          هذه الصفحة تجمع أفضل ما صنعت من أعمال، مبادرات، تجارب، ومحطات شكّلت رحلتي وصنعت فرقاً حقيقياً
         </span>
 
         {/* EN Description */}
         <span className="block">
-          This page brings together the work, initiatives, and experiences that shaped my journey and created meaningful impact.
+          This page brings together the work, initiatives, and experiences that shaped my journey and created meaningful impact
         </span>
       </motion.p>
 
