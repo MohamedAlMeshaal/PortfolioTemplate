@@ -88,7 +88,7 @@ export const projectsData: ProjectDetails[] = [
       "/cobs-carnival2-4.jpeg",
       "/cobs-carnival2-5.jpeg",
     ],
-    videos: ["/cobs-carnival2-video1.mp4", "/cobs-carnival2-video2.mp4"],
+    videos: ["/cobs-carnival2-video1.mp4.mp4", "/cobs-carnival2-video2.mp4.mp4"],
   },
 ];
 
