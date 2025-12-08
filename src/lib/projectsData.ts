@@ -17,7 +17,7 @@ export const projectsData: ProjectDetails[] = [
   slug: "cobs-introductory",
   title: "COBS Introductory",
   date: "November 24, 2024",
-  role: "President – College of Business Society (COBS)",
+  role: "Speaker",
   description:
     "Introductory workshop at the University of Bahrain to present the College of Business Society: who we are, our vision, mission, and how students can join and be part of the journey.",
   outcome:
