@@ -57,8 +57,7 @@ export const projectsData: ProjectDetails[] = [
       "Student Leadership",
     ],
     videos: [
-    "/cobs-Introductory1.mp4.mp4",
-    "/cobs-Introductory2.mp4.mp4",
+    "/Bahraini-Women’s-Day.mp4",
   ],
   },
 
