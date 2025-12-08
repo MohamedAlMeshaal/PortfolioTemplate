@@ -1,4 +1,4 @@
-// src/lib/projectsData.ts
+  // src/lib/projectsData.ts
 export type ProjectDetails = {
   slug: string;          // عنوان URL قصير وفريد (بدون مسافات)
   title: string;         // عنوان المشروع
@@ -27,7 +27,19 @@ export const projectsData: ProjectDetails[] = [
       "Student Leadership",
       "Community Engagement",
       "Public Speaking",
-      "University Life",
+      "University Life",]
+      
+      images: [
+    "/cobs-Introductory1.jpeg",
+    "/cobs-Introductory2.jpeg",
+    "/cobs-Introductory3.jpeg",
+    "/cobs-Introductory4.jpeg",
+    "/cobs-Introductory5.jpeg",
+  ],
+
+  videos: [
+    "/cobs-Introductory1.mp4.mp4",
+    "/cobs-Introductory2.mp4.mp4",
     ],
   },
 
