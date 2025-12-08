@@ -47,7 +47,7 @@ export const projectsData: ProjectDetails[] = [
     date: "December 1, 2024",
     description:
       "Led the College of Business Administration Society in organizing a special event for Bahraini Women’s Day, celebrating the achievements of Bahraini women and highlighting their impact in society and business.",
-    role: "General Leader – Event Director",
+    role: "Leader of the Event",
     outcome:
       "Created a respectful and inspiring celebration · strengthened the society’s connection with female students · highlighted role models from Bahraini women.",
     tags: [
@@ -86,7 +86,7 @@ export const projectsData: ProjectDetails[] = [
     date: "February 27, 2025",
     description:
       "Ramadan-themed welcome event for semester 2024/2. Re-energized students and celebrated community spirit.",
-    role: "General Leader (COBS President)",
+    role: "Leader of the Event",
     outcome:
       "Managed 70+ volunteers · 500+ attendees · sponsorship & media coverage · organized in < 1 week",
     tags: ["Event Design", "Leadership", "Operations", "Volunteers", "Sponsorship", "Media Coverage"],
@@ -114,7 +114,7 @@ export const projectsData: ProjectDetails[] = [
     date: "May 4, 2025",
     description:
       "Vibrant handmade carnival with creative booth games, festive decor, popcorn and ice cream.",
-    role: "General Leader (COBS President)",
+    role: "Part of the tournament organizer",
     outcome:
       "80+ volunteers · 1,000+ attendees · major sponsorships · media coverage",
     tags: ["Carnival Design", "Operations", "Volunteers", "Sponsorship", "Media Coverage"],
@@ -126,7 +126,7 @@ export const projectsData: ProjectDetails[] = [
     date: "October 12, 2025",
     description:
       "Open talk with Mr. Suheil Al-Qusaibi on challenges and lessons from his entrepreneurial journey.",
-    role: "Event Lead / Producer",
+    role: "Event Lead",
     outcome:
       "High student turnout · boosted interest in inspirational sessions and career dialogues",
     tags: ["Leadership Talk", "Organization", "Public Speaking", "Event Planning"],
