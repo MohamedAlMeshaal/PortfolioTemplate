@@ -17,6 +17,7 @@ export const projectsData: ProjectDetails[] = [
   slug: "cobs-introductory",
   title: "COBS Introductory",
   date: "November 24, 2024",
+  category: "cobs",
   role: "Speaker",
   description:
     "Introductory workshop at the University of Bahrain to present the College of Business Society: who we are, our vision, mission, and how students can join and be part of the journey.",
@@ -45,6 +46,7 @@ export const projectsData: ProjectDetails[] = [
     slug: "cobs-bahraini-womens-day-2024",
     title: "Bahraini Women’s Day",
     date: "December 1, 2024",
+    category: "cobs",
     description:
       "Led the College of Business Administration Society in organizing a special event for Bahraini Women’s Day, celebrating the achievements of Bahraini women and highlighting their impact in society and business.",
     role: "Leader of the Event",
@@ -66,6 +68,7 @@ export const projectsData: ProjectDetails[] = [
     slug: "cobs-cbb-visit-2024",
     title: "Central Bank of Bahrain Visit",
     date: "December 3, 2024",
+    category: "cobs",
     description:
       "Organized and led a COBS delegation visit to the Central Bank of Bahrain to learn about money flow, financial systems, and how the national banking ecosystem operates.",
     role: "COBS Delegation Leader",
@@ -90,6 +93,7 @@ export const projectsData: ProjectDetails[] = [
     slug: "cobs-walhana",
     title: "Walhana Alaikom Event",
     date: "February 27, 2025",
+    category: "cobs",
     description:
       "Ramadan-themed welcome event for semester 2024/2. Re-energized students and celebrated community spirit.",
     role: "Leader of the Event",
@@ -106,6 +110,7 @@ export const projectsData: ProjectDetails[] = [
     slug: "cobs-ramadan-football",
     title: "COBS Ramadan Football Tournament",
     date: "March 16, 2025",
+    category: "cobs",
     description:
       "Student football tournament uniting diverse teams with excitement and sportsmanship.",
     role: "General Leader (COBS President)",
@@ -118,6 +123,7 @@ export const projectsData: ProjectDetails[] = [
     slug: "cobs-carnival",
     title: "COBS Carnival",
     date: "May 4, 2025",
+    category: "cobs",
     description:
       "Vibrant handmade carnival with creative booth games, festive decor, popcorn and ice cream.",
     role: "Part of the tournament organizer",
@@ -130,6 +136,7 @@ export const projectsData: ProjectDetails[] = [
     slug: "cobs-inspiring-talk",
     title: "Guests of COBS",
     date: "October 12, 2025",
+    category: "cobs",
     description:
       "Open talk with Mr. Suheil Al-Qusaibi on challenges and lessons from his entrepreneurial journey.",
     role: "Event Lead",
@@ -142,6 +149,7 @@ export const projectsData: ProjectDetails[] = [
     slug: "cobs-carnival-2",
     title: "COBS Carnival 2",
     date: "October 23, 2025",
+    category: "cobs",
     description:
       "Second edition carnival for the College of Business — handmade games, popcorn, cotton candy, face painting, and live vibes created fully by the student team.",
     role: "General Leader / Executive Director",
@@ -171,6 +179,7 @@ export const projectsData: ProjectDetails[] = [
     slug: "cobs-khaleeji-bank-visit-2024",
     title: "Khaleeji Bank Visit",
     date: "October 20, 2024",
+    category: "cobs",
     description:
       "Coordinated a focused visit for COBS members to Khaleeji Bank, exploring daily operations across departments and understanding how banking roles connect to what students study in class.",
     role: "COBS Visit Coordinator",
