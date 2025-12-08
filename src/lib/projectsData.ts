@@ -13,35 +13,34 @@ export type ProjectDetails = {
 
 export const projectsData: ProjectDetails[] = [
     // 1) ورشة تعريف جمعية كلية إدارة الأعمال
-  {
-    slug: "cobs-intro-workshop-2024",
-    title: "COBS Introductory",
-    date: "November 24, 2024",
-    description:
-      "Introductory workshop at the University of Bahrain to present the College of Business Administration Society: who we are, our vision, mission, and how students can be part of the journey.",
-    role: "Speaker & COBS President",
-    outcome:
-      "80+ interested students attended · clarified the society’s identity and role · increased awareness and applications to join COBS.",
-    tags: [
-      "Workshop",
-      "Student Leadership",
-      "Community Engagement",
-      "Public Speaking",
-      "University Life",]
-      
-      images: [
+ {
+  slug: "cobs-introductory",
+  title: "COBS Introductory",
+  date: "November 24, 2024",
+  role: "President – College of Business Society (COBS)",
+  description:
+    "Introductory workshop at the University of Bahrain to present the College of Business Society: who we are, our vision, mission, and how students can join and be part of the journey.",
+  outcome:
+    "80+ interested students attended · clarified the society’s identity and role · increased awareness and applications to join COBS.",
+  tags: [
+    "Workshop",
+    "Student Leadership",
+    "Community Engagement",
+    "Public Speaking",
+    "University Life",
+  ],
+  images: [
     "/cobs-Introductory1.jpeg",
     "/cobs-Introductory2.jpeg",
     "/cobs-Introductory3.jpeg",
     "/cobs-Introductory4.jpeg",
     "/cobs-Introductory5.jpeg",
   ],
-
   videos: [
-    "/cobs-Introductory1.mp4.mp4",
-    "/cobs-Introductory2.mp4.mp4",
-    ],
-  },
+    "/cobs-Introductory1.mp4",
+    "/cobs-Introductory2.mp4",
+  ],
+},
 
   // 2) فعالية يوم المرأة البحرينية
   {
