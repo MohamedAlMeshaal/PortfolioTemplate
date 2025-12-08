@@ -56,6 +56,10 @@ export const projectsData: ProjectDetails[] = [
       "Community Engagement",
       "Student Leadership",
     ],
+    videos: [
+    "/cobs-Introductory1.mp4.mp4",
+    "/cobs-Introductory2.mp4.mp4",
+  ],
   },
 
   // 3) زيارة مصرف البحرين المركزي
