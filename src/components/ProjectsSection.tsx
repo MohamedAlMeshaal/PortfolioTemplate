@@ -49,77 +49,94 @@ const projects: Project[] = projectsData.map((p, idx) => ({
       <div className="light-ray-premium opacity-15" style={{ top: '60%', right: '-10%', width: '50%', transform: 'rotate(150deg)' }}></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
-        <motion.h2 
-          className="section-heading-premium relative"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          Featured Projects
-        </motion.h2>
-       <p className="text-base text-white/60 mt-4 mb-6 tracking-wide">
-  College of Business Society (COBS) Achievements
-</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              custom={index}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <GlowCard 
-                intensity={index % 3 === 0 ? 'high' : index % 2 === 0 ? 'medium' : 'low'}
-                className="group h-full"
-                hoverScale={1.03}
-              >
-                <div className="p-6 h-full flex flex-col relative z-10">
-                  {/* Premium highlight effect on hover */}
-                  <div className="absolute -inset-x-4 -inset-y-4 bg-white/5 rounded-xl opacity-0 group-hover:opacity-100 -z-10 blur-2xl transition-opacity"></div>
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-gradient-to-br from-white via-white/20 to-transparent transition-all duration-500"></div>
-                  
-                  <h3 className="text-2xl font-bold italic mb-3 group-hover:text-white transition-colors">{project.title}</h3>
-                  <p className="text-white/70 mb-6 group-hover:text-white/90 transition-colors">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-6 mt-auto">
-                    {project.techStack.map((tech, i) => (
-                      <span 
-                        key={i} 
-                        className="text-xs px-3 py-1 bg-dark-200/50 backdrop-blur-sm border border-white/5 rounded-full text-white/60 group-hover:text-white/90 group-hover:border-white/20 transition-all duration-300"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  
-                        {/* Personal Achievements subsection */}
-      <div className="mt-16">
-        <p className="text-base text-white/60 mb-6 tracking-wide">
-          Personal Achievements
-        </p>
+              {/* Featured Projects title */}
+      <motion.h2
+        className="text-4xl md:text-5xl font-extrabold italic tracking-tight text-white mb-2"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Featured Projects
+      </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Placeholder – هنضيف الكروت لاحقًا */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-3 text-center border border-dashed border-white/20 rounded-xl py-10 text-white/50">
-            Personal projects and achievements will be added here soon.
-          </div>
-        </div>
-      </div>
-                  
-                  <a 
-                    href={project.url} 
-                    className="inline-flex items-center gap-1 text-sm text-white/70 hover:text-white group-hover:text-white/90 transition-colors relative mt-auto"
-                  >
-                    <span>View Project</span>
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
-                  </a>
+      {/* ---- Section 1: COBS Achievements ---- */}
+      <p className="text-base text-white/60 mt-4 mb-6 tracking-wide">
+        College of Business Society (COBS) Achievements
+      </p>
+
+      {/* COBS projects grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project, index) => (
+          <motion.div
+            key={project.id}
+            className="group relative rounded-2xl border border-white/10 bg-black/40 p-6 md:p-8 overflow-hidden"
+            variants={cardVariants(index)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <GlowCard
+              intensity={index % 3 === 0 ? "high" : index % 2 === 0 ? "medium" : "low"}
+              className="group h-full"
+              hoverScale={1.03}
+            >
+              <div className="p-6 h-full flex flex-col relative z-10">
+                <h3 className="text-2xl font-bold italic mb-3 group-hover:text-white transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-white/70 mb-6 leading-relaxed">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-6 mt-auto">
+                  {project.techStack.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="text-xs px-3 py-1 bg-dark-200/50 backdrop-blur-sm border border-white/5 rounded-full text-white/60 group-hover:text-white/90 group-hover:border-white/20 transition-all"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              </GlowCard>
-            </motion.div>
+
+                <a
+                  href={project.url}
+                  className="inline-flex items-center text-sm font-medium text-white/80 group-hover:text-white transition-colors"
+                >
+                  View Project
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+            </GlowCard>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* ---- Section 2: Personal Achievements ---- */}
+      <p className="text-base text-white/60 mt-16 mb-6 tracking-wide">
+        Personal Achievements
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          className="group relative rounded-2xl border border-dashed border-white/20 bg-black/30 p-6 md:p-8 overflow-hidden"
+          variants={cardVariants(0)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="p-6 h-full flex flex-col items-center text-center relative z-10">
+            <h3 className="text-2xl font-bold italic mb-3 group-hover:text-white transition-colors">
+              Personal Achievements
+            </h3>
+            <p className="text-white/70 mb-6 leading-relaxed max-w-md">
+              Personal projects and achievements will be added here soon.
+            </p>
+          </div>
+        </motion.div>
+      </div>
+
           ))}
         </div>
       </div>
