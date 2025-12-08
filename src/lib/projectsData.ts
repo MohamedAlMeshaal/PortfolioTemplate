@@ -79,7 +79,7 @@ export const projectsData: ProjectDetails[] = [
       "Career Awareness",
     ],
      images: [
-    "/Central-Bank-of-Bahrain-Visit.jpeg",
+    "/Central-Bank-of-Bahrain-Visit.jpeg.jpeg",
   ],
   videos: [
     "/Central-Bank-of-Bahrain-Visit.mp4",
