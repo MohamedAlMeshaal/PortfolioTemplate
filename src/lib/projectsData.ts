@@ -33,8 +33,6 @@ export const projectsData: ProjectDetails[] = [
     "/cobs-Introductory1.jpeg.jpeg",
     "/cobs-Introductory2.jpeg.jpeg",
     "/cobs-Introductory3.jpeg.jpeg",
-    "/cobs-Introductory4.jpeg.jpeg",
-    "/cobs-Introductory5.jpeg.jpeg",
   ],
   videos: [
     "/cobs-Introductory1.mp4.mp4",
