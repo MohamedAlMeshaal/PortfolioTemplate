@@ -78,6 +78,12 @@ export const projectsData: ProjectDetails[] = [
       "Experiential Learning",
       "Career Awareness",
     ],
+     images: [
+    "/Central-Bank-of-Bahrain-Visit.jpeg",
+  ],
+  videos: [
+    "/Central-Bank-of-Bahrain-Visit.mp4",
+  ],
   },
 
   {
