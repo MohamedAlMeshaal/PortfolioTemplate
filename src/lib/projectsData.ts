@@ -82,7 +82,7 @@ export const projectsData: ProjectDetails[] = [
     "/Central-Bank-of-Bahrain-Visit.jpeg.jpeg",
   ],
   videos: [
-    "/Central-Bank-of-Bahrain-Visit.mp4",
+    "/Central-Bank-of-Bahrain-Visit.mp4.mp4",
   ],
   },
 
