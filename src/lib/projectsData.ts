@@ -30,15 +30,15 @@ export const projectsData: ProjectDetails[] = [
     "University Life",
   ],
   images: [
-    "/cobs-Introductory1.jpeg",
-    "/cobs-Introductory2.jpeg",
-    "/cobs-Introductory3.jpeg",
-    "/cobs-Introductory4.jpeg",
-    "/cobs-Introductory5.jpeg",
+    "/cobs-Introductory1.jpeg.jpeg",
+    "/cobs-Introductory2.jpeg.jpeg",
+    "/cobs-Introductory3.jpeg.jpeg",
+    "/cobs-Introductory4.jpeg.jpeg",
+    "/cobs-Introductory5.jpeg.jpeg",
   ],
   videos: [
-    "/cobs-Introductory1.mp4",
-    "/cobs-Introductory2.mp4",
+    "/cobs-Introductory1.mp4.mp4",
+    "/cobs-Introductory2.mp4.mp4",
   ],
 },
 
