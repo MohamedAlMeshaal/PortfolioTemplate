@@ -59,7 +59,7 @@ const projects: Project[] = projectsData.map((p, idx) => ({
           Featured Projects
         </motion.h2>
        <p className="text-base text-white/60 mt-4 mb-6 tracking-wide">
-  College of Business Society (COBS) Flashbacks
+  College of Business Society (COBS) Achievements
 </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
