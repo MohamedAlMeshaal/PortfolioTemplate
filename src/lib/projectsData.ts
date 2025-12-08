@@ -145,6 +145,26 @@ export const projectsData: ProjectDetails[] = [
     tags: ["Leadership Talk", "Organization", "Public Speaking", "Event Planning"],
     images: [],
   },
+  
+  // 4) زيارة خليجي بنك
+  {
+    slug: "cobs-khaleeji-bank-visit-2024",
+    title: "Khaleeji Bank Visit",
+    date: "October 20, 2024",
+    category: "cobs",
+    description:
+      "Coordinated a focused visit for COBS members to Khaleeji Bank, exploring daily operations across departments and understanding how banking roles connect to what students study in class.",
+    role: "COBS Visit Coordinator",
+    outcome:
+      "Increased financial awareness among members · built relationships with bank professionals · showed students how academic knowledge links to real banking careers.",
+    tags: [
+      "Industry Visit",
+      "Banking",
+      "Career Development",
+      "Networking",
+      "Student Leadership",
+    ],
+  },
   {
     slug: "cobs-carnival-2",
     title: "COBS Carnival 2",
@@ -172,26 +192,6 @@ export const projectsData: ProjectDetails[] = [
       "/cobs-carnival2-7.jpeg.jpeg",
     ],
     videos: ["/cobs-carnival2-video1.mp4.mp4", "/cobs-carnival2-video2.mp4.mp4"],
-  },
-  
-  // 4) زيارة خليجي بنك
-  {
-    slug: "cobs-khaleeji-bank-visit-2024",
-    title: "Khaleeji Bank Visit",
-    date: "October 20, 2024",
-    category: "cobs",
-    description:
-      "Coordinated a focused visit for COBS members to Khaleeji Bank, exploring daily operations across departments and understanding how banking roles connect to what students study in class.",
-    role: "COBS Visit Coordinator",
-    outcome:
-      "Increased financial awareness among members · built relationships with bank professionals · showed students how academic knowledge links to real banking careers.",
-    tags: [
-      "Industry Visit",
-      "Banking",
-      "Career Development",
-      "Networking",
-      "Student Leadership",
-    ],
   },
 ];
 
