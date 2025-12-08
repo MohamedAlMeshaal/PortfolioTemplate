@@ -95,6 +95,20 @@ const projects: Project[] = projectsData.map((p, idx) => ({
                     ))}
                   </div>
                   
+                        {/* Personal Achievements subsection */}
+      <div className="mt-16">
+        <p className="text-base text-white/60 mb-6 tracking-wide">
+          Personal Achievements
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Placeholder – هنضيف الكروت لاحقًا */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-3 text-center border border-dashed border-white/20 rounded-xl py-10 text-white/50">
+            Personal projects and achievements will be added here soon.
+          </div>
+        </div>
+      </div>
+                  
                   <a 
                     href={project.url} 
                     className="inline-flex items-center gap-1 text-sm text-white/70 hover:text-white group-hover:text-white/90 transition-colors relative mt-auto"
