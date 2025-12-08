@@ -7,7 +7,7 @@ import { projectsData } from "@/lib/projectsData";
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import GlowCard from "@/components/ui/GlowCard";
+import GlowCard from "@/components/GlowCard";
 import projectsData from "@/lib/projectsData";
 
 const ProjectsSection: React.FC = () => {
