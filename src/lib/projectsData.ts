@@ -245,8 +245,10 @@ export const projectsData: ProjectDetails[] = [
     "Represented the University of Bahrain at the inauguration of the GCC Pavilion accompanying the 46th Gulf Summit. Engaged with diplomatic representatives and contributed to showcasing student initiatives.",
   outcome:
     "Enhanced networking experience and strengthened the university’s presence in a major regional event.",
-  images: [],
-  videos: []
+  images: [
+    "/GCC1.jpeg.jpeg",
+    "/GCC2.jpeg.jpeg"
+  ],
 },
 
 ];
