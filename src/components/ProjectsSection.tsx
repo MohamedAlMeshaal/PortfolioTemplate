@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import GlowCard from "@/components/GlowCard";
-import projectsData from "@/lib/projectsData";
+import GlowCard from "@/components/ui/GlowCard";
+import { projectsData } from "@/lib/projectsData";
 
 const ProjectsSection: React.FC = () => {
-  // حالياً كل البروجكتات اللي عندك تابعة لـ COBS
+  // حالياً نستخدم كل المشاريع (COBS + الشخصية) من نفس الأري
   const cobsProjects = projectsData;
 
   const containerVariants = {
@@ -13,13 +13,21 @@ const ProjectsSection: React.FC = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.08 },
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.08,
+      },
     },
   };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut" },
+    },
   };
 
   return (
@@ -39,7 +47,7 @@ const ProjectsSection: React.FC = () => {
           Featured Projects
         </motion.h2>
 
-        {/* ---------------- COBS Achievements ---------------- */}
+        {/* الوصف تحت العنوان */}
         <motion.p
           className="text-base text-white/60 mt-4 mb-8 tracking-wide"
           initial={{ opacity: 0, y: 10 }}
@@ -47,9 +55,11 @@ const ProjectsSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.1 }}
         >
-          College of Business Society (COBS) Achievements
+          Selected achievements, volunteering, and projects from COBS and my
+          personal work.
         </motion.p>
 
+        {/* كروت المشاريع */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
@@ -58,25 +68,38 @@ const ProjectsSection: React.FC = () => {
           viewport={{ once: true }}
         >
           {cobsProjects.map((project: any, index: number) => (
-            <motion.div key={project.id ?? index} variants={cardVariants}>
+            <motion.div
+              key={project.slug ?? index}
+              variants={cardVariants}
+              className="h-full"
+            >
               <GlowCard
-                intensity={
-                  index % 3 === 0 ? "high" : index % 2 === 0 ? "medium" : "low"
-                }
+                intensity={index % 3 === 0 ? "high" : index % 2 === 0 ? "medium" : "low"}
                 className="group h-full"
                 hoverScale={1.03}
               >
+                <div className="p-6 h-full flex flex-col relative z-10">
+                  {/* العنوان */}
                   <h3 className="text-xl md:text-2xl font-bold italic mb-3 group-hover:text-white transition-colors">
                     {project.title}
                   </h3>
 
+                  {/* الوصف */}
                   {project.description && (
                     <p className="text-white/80 text-sm leading-relaxed mb-4 flex-1">
                       {project.description}
                     </p>
                   )}
 
-                  {/* التاقات لو موجودة */}
+                  {/* نتيجة / Outcome */}
+                  {project.outcome && (
+                    <p className="text-green-300/90 text-sm font-semibold mb-3">
+                      <span className="font-semibold">Outcome:</span>{" "}
+                      {project.outcome}
+                    </p>
+                  )}
+
+                  {/* التاقات */}
                   {project.tags && project.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag: string, i: number) => (
@@ -90,9 +113,9 @@ const ProjectsSection: React.FC = () => {
                     </div>
                   )}
 
-                  {/* زر التفاصيل لو عندك URL */}
-                  <div className="mt-auto pt-2">
-                    {project.slug || project.url ? (
+                  {/* زر View Project مع الرابط */}
+                  {(project.slug || project.url) && (
+                    <div className="mt-auto pt-2">
                       <a
                         href={project.url || `/projects/${project.slug}`}
                         className="inline-flex items-center text-sm text-white/80 group-hover:text-white transition-colors"
@@ -100,17 +123,14 @@ const ProjectsSection: React.FC = () => {
                         View Project
                         <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform" />
                       </a>
-                    ) : (
-                      <span className="text-xs text-white/40">
-                        More details coming soon.
-                      </span>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               </GlowCard>
             </motion.div>
           ))}
         </motion.div>
+      </div>
     </section>
   );
 };
