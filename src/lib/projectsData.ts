@@ -22,7 +22,7 @@ export const projectsData: ProjectDetails[] = [
     "Completed a specialized training program organized by UNIDO ITPO Bahrain and the International Center for Entrepreneurship & Innovation. The program focused on volunteering management, conference planning, and event operations.",
   outcome:
     "Gained practical skills in event coordination, volunteer engagement, and conference management.",
-  images: ["/certificates/unido-cert.jpeg"],
+  images: ["/Unido.jpeg.jpeg"],
   videos: []
 },
   
