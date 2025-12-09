@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import GlowCard from "@/components/ui/GlowCard";
+import GlowCard from "@/components/GlowCard";
 
 type Certificate = {
   id: string;
