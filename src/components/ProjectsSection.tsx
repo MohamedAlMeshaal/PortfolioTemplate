@@ -1,9 +1,4 @@
-// الأفضل إذا كان عندك alias "@"
-import { projectsData } from "@/lib/projectsData";
-
-// لو ما يشتغل alias "@", استخدم المسار النسبي من هذا الملف إلى src/lib
-// import { projectsData } from "../../lib/projectsData";
-
+// src/components/ProjectsSection.tsx
 import React from "react";
 import { motion } from "framer-motion";
 import GlowCard from "@/components/ui/GlowCard";
