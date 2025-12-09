@@ -12,6 +12,34 @@ export type ProjectDetails = {
 };
 
 export const projectsData: ProjectDetails[] = [
+  {
+  slug: "unido-training",
+  title: "Volunteers Convention & Conference Management Training",
+  date: "May 14-16, 2024",
+  category: "certificates",
+  role: "Participant",
+  description:
+    "Completed a specialized training program organized by UNIDO ITPO Bahrain and the International Center for Entrepreneurship & Innovation. The program focused on volunteering management, conference planning, and event operations.",
+  outcome:
+    "Gained practical skills in event coordination, volunteer engagement, and conference management.",
+  images: ["/certificates/unido-cert.jpeg"],
+  videos: []
+},
+  
+  {
+  slug: "uob-sustainable-conference",
+  title: "Organizer at Islamic Finance Conference",
+  date: "November 27-28, 2024",
+  category: "certificates",
+  role: "Organizer",
+  description:
+    "Recognized by the College of Business Administration at the University of Bahrain for participating in organizing the 4th International Conference on Sustainable Islamic Business and Finance.",
+  outcome:
+    "Supported event logistics and coordination for an international academic conference.",
+  images: ["/certificates/uob-conference-cert.jpeg"],
+  videos: []
+},
+
     // 1) ورشة تعريف جمعية كلية إدارة الأعمال
  {
   slug: "cobs-introductory",
@@ -206,6 +234,21 @@ export const projectsData: ProjectDetails[] = [
     ],
     videos: ["/cobs-carnival2-video1.mp4.mp4", "/cobs-carnival2-video2.mp4.mp4"],
   },
+
+  {
+  slug: "gcc-summit-representation",
+  title: "UOB Representation at the GCC Summit 46 Pavilion",
+  date: "November 13, 2025",
+  category: "representation",
+  role: "University Delegate",
+  description:
+    "Represented the University of Bahrain at the inauguration of the GCC Pavilion accompanying the 46th Gulf Summit. Engaged with diplomatic representatives and contributed to showcasing student initiatives.",
+  outcome:
+    "Enhanced networking experience and strengthened the university’s presence in a major regional event.",
+  images: [],
+  videos: []
+},
+
 ];
 
 export default projectsData;
