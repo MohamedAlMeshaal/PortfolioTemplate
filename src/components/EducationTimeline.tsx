@@ -1,78 +1,93 @@
+import React from "react";
+import { motion } from "framer-motion";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-
-interface Education {
-  id: number;
-  years: string;
-  degree: string;
+type EducationItem = {
+  period: string;
+  title: string;
   institution: string;
-  grade: string;
-}
+  location?: string;
+  details: string;
+};
+
+const education: EducationItem[] = [
+  {
+    period: "2018 – 2020",
+    title: "High School – Commercial Track",
+    institution: "Al Ta'awon Secondary Boys School",
+    location: "Bahrain",
+    details:
+      "Completed secondary education with a specialization in commercial studies, gaining foundational knowledge in business, accounting, and economics.",
+  },
+  {
+    period: "2021 – 2025",
+    title:
+      "B.Sc. in Business Administration – Major in Entrepreneurship, Minor in Marketing",
+    institution: "University of Bahrain – College of Business Administration",
+    location: "Sakhir, Bahrain",
+    details:
+      "Focused on entrepreneurship, innovation, marketing, and business development, with strong involvement in academic and extracurricular activities.",
+  },
+];
 
 const EducationTimeline: React.FC = () => {
-  const educationData: Education[] = [
-    {
-      id: 1,
-      years: "202X–202X",
-      degree: "B.Tech, Computer Science",
-      institution: "IIT Dholakpur",
-      grade: "GPA: X/10"
-    },
-    {
-      id: 2,
-      years: "202X–202X",
-      degree: "Higher Secondary Education",
-      institution: "XX School",
-      grade: "Percentage: XX%"
-    },
-    {
-      id: 3,
-      years: "201X–202X",
-      degree: "Secondary Education",
-      institution: "Delhi Public School",
-      grade: "CGPA: XX/10"
-    }
-  ];
-
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        <motion.h2 
-          className="section-heading"
+    <section
+      id="education"
+      className="relative py-20 px-4 bg-gradient-to-b from-black via-neutral-950 to-black"
+    >
+      <div className="max-w-5xl mx-auto">
+        {/* العنوان الرئيسي */}
+        <motion.h2
+          className="text-3xl md:text-4xl font-extrabold text-white tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
           Education
         </motion.h2>
-        
-        <div className="relative pl-10">
-          {/* Timeline line with glow effect */}
-          <div className="timeline-line"></div>
-          
-          {/* Timeline items */}
-          {educationData.map((item, index) => (
-            <motion.div 
-              key={item.id}
-              className="mb-12 relative"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+
+        <motion.p
+          className="text-base text-white/60 mt-4 mb-10 tracking-wide"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+        >
+          Academic background and formal studies that shaped my foundation in
+          business and entrepreneurship.
+        </motion.p>
+
+        {/* التايم لاين */}
+        <div className="space-y-8 border-l border-white/10 pl-6">
+          {education.map((item, index) => (
+            <motion.div
+              key={index}
+              className="relative"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
             >
-              {/* Timeline dot with glow */}
-              <div className="absolute -left-10 w-4 h-4 rounded-full bg-white/20 border border-white/40" style={{
-                boxShadow: '0 0 10px rgba(255, 255, 255, 0.3)'
-              }}></div>
-              
-              <div className="glow-card p-6">
-                <span className="text-white/60 block mb-1">{item.years}</span>
-                <h3 className="text-xl font-bold mb-1">{item.degree}</h3>
-                <p className="text-white/80 mb-1">{item.institution}</p>
-                <p className="text-white/60">{item.grade}</p>
-              </div>
+              {/* النقطة */}
+              <span className="absolute -left-3.5 top-1 w-3 h-3 rounded-full bg-white shadow-lg" />
+
+              <p className="text-xs uppercase tracking-[0.18em] text-white/50 mb-1">
+                {item.period}
+              </p>
+
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-1">
+                {item.title}
+              </h3>
+
+              <p className="text-sm text-white/70 mb-1">
+                {item.institution}
+                {item.location && (
+                  <span className="text-white/40"> • {item.location}</span>
+                )}
+              </p>
+
+              <p className="text-sm text-white/60 mb-3">{item.details}</p>
             </motion.div>
           ))}
         </div>
