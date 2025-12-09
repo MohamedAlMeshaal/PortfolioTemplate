@@ -101,11 +101,9 @@ const Index: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a
+              <a
   href="#resume"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="cta-button-premium text-sm px-4 py-1"
+  className="..."
 >
   Resume
 </a>
@@ -122,7 +120,7 @@ const Index: React.FC = () => {
   <ProjectsSection />
   <EducationTimeline />
   <BlogSection />
-  <ResumeRequestSection /> 
+  <ResumeSection /> 
   <ContactSection />
 </main>
         
