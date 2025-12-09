@@ -103,8 +103,7 @@ const BlogSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Selected certificates, volunteering experiences, and training programs
-          that shaped my academic and professional journey.
+         Certifications that shaped my journey — with bigger achievements still ahead.
         </motion.p>
 
         <motion.div
