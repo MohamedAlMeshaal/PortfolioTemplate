@@ -12,7 +12,7 @@ type EducationItem = {
 const education: EducationItem[] = [
   {
     period: "2018 – 2020",
-    title: "High School – Commercial Track",
+    title: "Commercial Track",
     institution: "Al Ta'awon Secondary Boys School",
     location: "Bahrain",
     details:
@@ -21,8 +21,8 @@ const education: EducationItem[] = [
   {
     period: "2021 – 2025",
     title:
-      "B.Sc. in Business Administration – Major in Entrepreneurship, Minor in Marketing",
-    institution: "University of Bahrain – College of Business Administration",
+      "B.Sc. in Science of Entrepreneurship & Marketing",
+    institution: "University of Bahrain",
     location: "Sakhir, Bahrain",
     details:
       "Focused on entrepreneurship, innovation, marketing, and business development, with strong involvement in academic and extracurricular activities.",
