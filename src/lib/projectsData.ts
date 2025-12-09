@@ -36,7 +36,7 @@ export const projectsData: ProjectDetails[] = [
     "Recognized by the College of Business Administration at the University of Bahrain for participating in organizing the 4th International Conference on Sustainable Islamic Business and Finance.",
   outcome:
     "Supported event logistics and coordination for an international academic conference.",
-  images: ["/certificates/uob-conference-cert.jpeg"],
+  images: ["/Organizer-Islamic.jpeg.jpeg"],
   videos: []
 },
 
