@@ -124,7 +124,7 @@ export const projectsData: ProjectDetails[] = [
   },
   {
     slug: "cobs-carnival",
-    title: "COBS Carnival",
+    title: "Carnival COBS 1",
     date: "May 4, 2025",
     category: "cobs",
     description:
@@ -133,7 +133,15 @@ export const projectsData: ProjectDetails[] = [
     outcome:
       "80+ volunteers · 1,000+ attendees · major sponsorships · media coverage",
     tags: ["Carnival Design", "Operations", "Volunteers", "Sponsorship", "Media Coverage"],
-    images: [],
+    images: [
+      "/carnival-cobs1.jpeg.jpeg",
+      "/carnival-cobs2.jpeg.jpeg",
+      "/carnival-cobs3.jpeg.jpeg"
+    ]
+    videos:  [
+    "/carnival-cobs1.mp4.mp4",
+    "/carnival-cobs2.mp4.mp4"
+  ]
   },
   {
     slug: "cobs-inspiring-talk",
@@ -170,7 +178,7 @@ export const projectsData: ProjectDetails[] = [
   },
   {
     slug: "cobs-carnival-2",
-    title: "COBS Carnival 2",
+    title: "Carnival COBS 2",
     date: "October 23, 2025",
     category: "cobs",
     description:
