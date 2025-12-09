@@ -117,7 +117,10 @@ export const projectsData: ProjectDetails[] = [
     outcome:
       "150+ participants · large audience turnout · sponsorship · media coverage · 30+ volunteers",
     tags: ["Sports Event", "Team Management", "Leadership", "Sponsorship", "Media Coverage", "Volunteers"],
-    images: [],
+     videos: [
+       "/cobs-tournament1.mp4.mp4",
+       "/cobs-tournament2.mp4.mp4"
+             ]
   },
   {
     slug: "cobs-carnival",
