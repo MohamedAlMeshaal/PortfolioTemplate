@@ -1,7 +1,7 @@
 // src/components/ProjectsSection.tsx
 import React from "react";
 import { motion } from "framer-motion";
-import { projects } from "@/lib/projectsData";
+import { projectsData } from "@/lib/projectsData";
 
 const ProjectsSection: React.FC = () => {
   return (
