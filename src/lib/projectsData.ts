@@ -174,6 +174,9 @@ export const projectsData: ProjectDetails[] = [
       "Networking",
       "Student Leadership",
     ],
+    images: [
+      "/Khaleeji-Bank-Visit.jpeg.jpeg"
+    ],
   },
   {
     slug: "cobs-carnival-2",
