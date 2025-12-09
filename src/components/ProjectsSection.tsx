@@ -1,92 +1,109 @@
-// src/components/ProjectsSection.tsx
 import React from "react";
 import { motion } from "framer-motion";
 import { projectsData } from "@/lib/projectsData";
 
+interface Project {
+  slug: string;
+  title: string;
+  date?: string;
+  description: string;
+  role?: string;
+  outcome?: string;
+  tags: string[];
+  images?: string[];
+  videos?: string;
+}
+
 const ProjectsSection: React.FC = () => {
+  const projects = projectsData as Project[];
+
   return (
-    <section id="projects" className="py-16 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Section heading */}
+    <section
+      id="projects"
+      className="relative py-20 px-4 md:px-8 lg:px-12 bg-dark min-h-screen"
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* العنوان الرئيسي */}
         <motion.h2
-          className="text-3xl md:text-4xl font-extrabold mb-4"
+          className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
           Featured Projects
         </motion.h2>
 
-        {/* Subtitle – COBS + personal + volunteering */}
+        {/* الوصف تحت العنوان */}
         <motion.p
-          className="text-base text-white/70 mb-10"
+          className="text-base md:text-lg text-white/70 mb-10"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Curated highlights of what I’ve built and led — from COBS initiatives
-          to personal projects and volunteering that created real impact.
+          Selected achievements, volunteering, and projects from COBS and my
+          personal work.
         </motion.p>
 
-        {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-            >
-              {/* Card بدون GlowCard */}
-              <div
-                className="group h-full rounded-2xl border border-white/10 
-                           bg-gradient-to-br from-white/5 via-white/0 to-white/5 
-                           p-6 shadow-[0_0_40px_rgba(255,255,255,0.08)] 
-                           hover:border-white/30 hover:shadow-[0_0_60px_rgba(255,255,255,0.18)] 
-                           transition-all duration-300 flex flex-col justify-between"
+        {/* بطاقات المشاريع */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => {
+            const date = project.date2 ?? project.date ?? "";
+            const role = project.role2 ?? project.role ?? "";
+            const outcome = project.outcome2 ?? project.outcome ?? "";
+
+            return (
+              <motion.div
+                key={project.slug ?? index}
+                className="relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md hover:border-white/30 transition-colors"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
               >
-                <div>
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-white transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">
-                    {project.description}
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                  {project.title}
+                </h3>
+
+                {date && (
+                  <p className="text-sm text-white/60 mb-2">
+                    <span className="font-semibold">Date:</span> {date}
                   </p>
-
-                  {/* Tags */}
-                  {project.techStack && project.techStack.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {project.techStack.map((tag: string) => (
-                        <span
-                          key={tag}
-                          className="text-xs px-3 py-1 bg-white/5 border border-white/10 
-                                     rounded-full text-white/70 group-hover:text-white"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {/* Optional link */}
-                {project.url && (
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-6 inline-flex items-center text-sm text-white/80 group-hover:text-white gap-2"
-                  >
-                    View Project
-                    <span aria-hidden>↗</span>
-                  </a>
                 )}
-              </div>
-            </motion.div>
-          ))}
+
+                {role && (
+                  <p className="text-sm text-white/60 mb-2">
+                    <span className="font-semibold">Role:</span> {role}
+                  </p>
+                )}
+
+                <p className="text-sm md:text-base text-white/80 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+
+                {outcome && (
+                  <p className="text-xs md:text-sm text-emerald-300/90 mb-4">
+                    <span className="font-semibold">Outcome:</span> {outcome}
+                  </p>
+                )}
+
+                {/* التاغز */}
+                {project.tags && project.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {project.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="text-xs px-3 py-1 rounded-full bg-white/10 text-white/80"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
