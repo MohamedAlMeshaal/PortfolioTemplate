@@ -8,18 +8,6 @@ const ProjectsSection: React.FC = () => {
   // حالياً كل البروجكتات اللي عندك تابعة لـ COBS
   const cobsProjects = projectsData;
 
-  // قسم المشاريع الشخصية – عدل عليه لاحقاً براحتك
-  const personalProjects = [
-    {
-      id: "personal-1",
-      title: "Personal Achievements",
-      description:
-        "Personal projects, initiatives, and achievements outside COBS will be added here soon.",
-      tags: ["Personal", "In Progress"],
-      url: "#",
-    },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
