@@ -66,17 +66,6 @@ const ProjectsSection: React.FC = () => {
                 className="group h-full"
                 hoverScale={1.03}
               >
-                <div className="p-6 h-full flex flex-col relative z-10">
-                  {/* التاريخ & الدور لو موجودة */}
-                  <div className="flex items-center justify-between text-xs text-white/50 mb-3">
-                    <span>{project.date}</span>
-                    {project.role && (
-                      <span className="px-2 py-0.5 rounded-full border border-white/10 text-[11px]">
-                        {project.role}
-                      </span>
-                    )}
-                  </div>
-
                   <h3 className="text-xl md:text-2xl font-bold italic mb-3 group-hover:text-white transition-colors">
                     {project.title}
                   </h3>
@@ -122,9 +111,6 @@ const ProjectsSection: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-           
-        </div>
-      </div>
     </section>
   );
 };
