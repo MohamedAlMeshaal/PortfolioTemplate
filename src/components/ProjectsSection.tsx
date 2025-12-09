@@ -55,8 +55,7 @@ const ProjectsSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.1 }}
         >
-          Selected achievements, volunteering, and projects from COBS and my
-          personal work.
+        Highlights from my journey in COBS, personal projects, and community volunteering.
         </motion.p>
 
         {/* كروت المشاريع */}
