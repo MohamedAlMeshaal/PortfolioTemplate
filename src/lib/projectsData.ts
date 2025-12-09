@@ -14,7 +14,7 @@ export type ProjectDetails = {
 export const projectsData: ProjectDetails[] = [
   {
   slug: "unido-training",
-  title: "Volunteers Convention & Conference Management Training",
+  title: "UNIDO Volunteer",
   date: "May 14-16, 2024",
   category: "certificates",
   role: "Participant",
@@ -22,13 +22,18 @@ export const projectsData: ProjectDetails[] = [
     "Completed a specialized training program organized by UNIDO ITPO Bahrain and the International Center for Entrepreneurship & Innovation. The program focused on volunteering management, conference planning, and event operations.",
   outcome:
     "Gained practical skills in event coordination, volunteer engagement, and conference management.",
+    tags: [
+  "Training Program",
+  "Volunteer Management",
+  "Conference Planning",
+],
   images: ["/Unido.jpeg.jpeg"],
   videos: []
 },
   
   {
   slug: "uob-sustainable-conference",
-  title: "Organizer at Islamic Finance Conference",
+  title: "Organizer at Sustainable Islamic Finance Conference",
   date: "November 27-28, 2024",
   category: "certificates",
   role: "Organizer",
@@ -36,6 +41,11 @@ export const projectsData: ProjectDetails[] = [
     "Recognized by the College of Business Administration at the University of Bahrain for participating in organizing the 4th International Conference on Sustainable Islamic Business and Finance.",
   outcome:
     "Supported event logistics and coordination for an international academic conference.",
+    tags: [
+  "Event Organization",
+  "Conference Management",
+  "Team Coordination",
+],
   images: ["/Organizer-Islamic.jpeg.jpeg"],
   videos: []
 },
@@ -245,6 +255,11 @@ export const projectsData: ProjectDetails[] = [
     "Represented the University of Bahrain at the inauguration of the GCC Pavilion accompanying the 46th Gulf Summit. Engaged with diplomatic representatives and contributed to showcasing student initiatives.",
   outcome:
     "Enhanced networking experience and strengthened the university’s presence in a major regional event.",
+    tags: [
+  "Representation",
+  "Leadership",
+  "Public Relations",
+],
   images: [
     "/GCC1.jpeg.jpeg",
     "/GCC2.jpeg.jpeg"
