@@ -1,78 +1,93 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
 
-interface BlogPost {
-  id: number;
+type Certificate = {
   title: string;
-  url: string;
+  issuer: string;
   date: string;
-}
+  image?: string;
+};
 
-const BlogSection: React.FC = () => {
-  const blogPosts: BlogPost[] = [
-    {
-      id: 1,
-      title: "How I solved 300+ LeetCode problems in 3 months",
-      url: "#",
-      date: "March 15, 2023"
-    },
-    {
-      id: 2,
-      title: "10 SaaS UI Patterns You Should Steal Today",
-      url: "#",
-      date: "February 22, 2023"
-    },
-    {
-      id: 3,
-      title: "My journey from a 2⭐ to 5⭐ coder on CodeChef",
-      url: "#",
-      date: "January 10, 2023"
-    },
-    {
-      id: 4,
-      title: "Building a real-time collaborative editor with WebSockets",
-      url: "#",
-      date: "December 5, 2022"
-    }
-  ];
+const certifications: Certificate[] = [
+  {
+    title: "Google Project Management Certificate",
+    issuer: "Google / Coursera",
+    date: "2024",
+    image: "/cert-google-pm.jpg",
+  },
+  {
+    title: "Digital Marketing Fundamentals",
+    issuer: "Meta Blueprint",
+    date: "2023",
+    image: "/cert-digital-marketing.jpg",
+  },
+  {
+    title: "Entrepreneurship & Innovation Program",
+    issuer: "University of Bahrain",
+    date: "2023",
+    image: "/cert-entrepreneurship.jpg",
+  },
+  {
+    title: "Leadership & Youth Development",
+    issuer: "The Leader Program",
+    date: "2022",
+    image: "/cert-leadership.jpg",
+  },
+];
 
+const CertificationsSection: React.FC = () => {
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        <motion.h2 
-          className="section-heading"
+    <section
+      id="certifications"
+      className="relative py-20 px-4 bg-gradient-to-b from-black via-neutral-950 to-black"
+    >
+      <div className="max-w-5xl mx-auto">
+        <motion.h2
+          className="text-3xl md:text-4xl font-extrabold text-white tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Sharing stories & threads from my coding journey.
+          Certifications
         </motion.h2>
-        
-        <div className="space-y-6">
-          {blogPosts.map((post, index) => (
-            <motion.div 
-              key={post.id}
+
+        <motion.p
+          className="text-white/60 mt-4 mb-10 text-base tracking-wide"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+        >
+          A collection of professional certifications in business, leadership,
+          and digital skills.
+        </motion.p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {certifications.map((cert, i) => (
+            <motion.div
+              key={i}
+              className="bg-neutral-900/40 border border-white/10 rounded-xl overflow-hidden hover:bg-neutral-900/60 transition-all flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
             >
-              <a 
-                href={post.url}
-                className="block glow-card p-6 hover:border-white/40 transition-colors group"
-              >
-                <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
-                  <h3 className="text-lg font-medium group-hover:underline decoration-white/30 underline-offset-4">
-                    {post.title}
-                  </h3>
-                  <div className="flex items-center gap-4">
-                    <span className="text-sm text-white/60">{post.date}</span>
-                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                  </div>
-                </div>
-              </a>
+              {cert.image && (
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="w-full aspect-video object-cover"
+                />
+              )}
+
+              <div className="p-6 flex-1">
+                <h3 className="text-lg font-semibold text-white">
+                  {cert.title}
+                </h3>
+                <p className="text-white/70 mt-1">{cert.issuer}</p>
+                <p className="text-white/40 text-sm mt-1">{cert.date}</p>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -81,4 +96,4 @@ const BlogSection: React.FC = () => {
   );
 };
 
-export default BlogSection;
+export default CertificationsSection;
