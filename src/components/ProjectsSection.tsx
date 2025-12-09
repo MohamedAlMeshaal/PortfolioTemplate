@@ -49,8 +49,6 @@ const ProjectsSection: React.FC = () => {
         {/* بطاقات المشاريع */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => {
-            const date = project.date2 ?? project.date ?? "";
-            const role = project.role2 ?? project.role ?? "";
             const outcome = project.outcome2 ?? project.outcome ?? "";
 
             return (
