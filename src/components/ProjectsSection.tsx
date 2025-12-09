@@ -14,18 +14,6 @@ const ProjectsSection: React.FC = () => {
   // حالياً كل البروجكتات اللي عندك تابعة لـ COBS
   const cobsProjects = projectsData;
 
-  // قسم المشاريع الشخصية – عدل عليه لاحقاً براحتك
-  const personalProjects = [
-    {
-      id: "personal-1",
-      title: "Personal Achievements",
-      description:
-        "Personal projects, initiatives, and achievements outside COBS will be added here soon.",
-      tags: ["Personal", "In Progress"],
-      url: "#",
-    },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -65,7 +53,7 @@ const ProjectsSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.1 }}
         >
-          College of Business Society (COBS) Achievements
+         Highlights from my journey in COBS, personal projects, and community volunteering.
         </motion.p>
 
         <motion.div
@@ -140,77 +128,6 @@ const ProjectsSection: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* ---------------- Personal Achievements ---------------- */}
-        <div className="mt-16">
-          <motion.h3
-            className="text-2xl md:text-3xl font-extrabold text-white tracking-tight mb-3"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            Personal Achievements
-          </motion.h3>
-
-          <motion.p
-            className="text-base text-white/60 mb-8"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-          >
-            Personal projects, initiatives, and achievements beyond COBS.
-          </motion.p>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {personalProjects.map((project, index) => (
-              <motion.div key={project.id} variants={cardVariants}>
-                <GlowCard
-                  intensity={index % 2 === 0 ? "medium" : "low"}
-                  className="group h-full"
-                  hoverScale={1.03}
-                >
-                  <div className="p-6 h-full flex flex-col relative z-10">
-                    <h4 className="text-xl font-bold italic mb-3 group-hover:text-white transition-colors">
-                      {project.title}
-                    </h4>
-
-                    <p className="text-white/80 text-sm leading-relaxed mb-4 flex-1">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tags.map((tag, i) => (
-                        <span
-                          key={i}
-                          className="text-[11px] px-3 py-1 bg-black/40 backdrop-blur-sm border border-white/10 rounded-full text-white/70"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="mt-auto pt-2">
-                      <span className="text-xs text-white/40">
-                        You can replace this card later with your real personal
-                        projects.
-                      </span>
-                    </div>
-                  </div>
-                </GlowCard>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-    </section>
   );
 };
 
