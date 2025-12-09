@@ -135,13 +135,12 @@ export const projectsData: ProjectDetails[] = [
     tags: ["Carnival Design", "Operations", "Volunteers", "Sponsorship", "Media Coverage"],
     images: [
       "/carnival-cobs1.jpeg.jpeg",
-      "/carnival-cobs2.jpeg.jpeg",
-      "/carnival-cobs3.jpeg.jpeg"
-    ]
+      "/carnival-cobs2.jpeg.jpeg"
+    ],
     videos:  [
     "/carnival-cobs1.mp4.mp4",
     "/carnival-cobs2.mp4.mp4"
-  ]
+  ],
   },
   {
     slug: "cobs-inspiring-talk",
