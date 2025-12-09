@@ -1,7 +1,6 @@
 // src/components/ProjectsSection.tsx
 import React from "react";
 import { motion } from "framer-motion";
-import GlowCard from "@/components/ui/GlowCard";
 import { projects } from "@/lib/projectsData";
 
 const ProjectsSection: React.FC = () => {
@@ -41,49 +40,51 @@ const ProjectsSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
             >
-              <GlowCard
-                intensity={index % 3 === 0 ? "high" : index % 3 === 1 ? "medium" : "low"}
-                className="group h-full"
-                hoverScale={1.03}
+              {/* Card بدون GlowCard */}
+              <div
+                className="group h-full rounded-2xl border border-white/10 
+                           bg-gradient-to-br from-white/5 via-white/0 to-white/5 
+                           p-6 shadow-[0_0_40px_rgba(255,255,255,0.08)] 
+                           hover:border-white/30 hover:shadow-[0_0_60px_rgba(255,255,255,0.18)] 
+                           transition-all duration-300 flex flex-col justify-between"
               >
-                <div className="p-6 h-full flex flex-col justify-between relative z-10">
-                  <div>
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-white transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">
-                      {project.description}
-                    </p>
+                <div>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-white transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">
+                    {project.description}
+                  </p>
 
-                    {/* Tags */}
-                    {project.techStack && project.techStack.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {project.techStack.map((tag: string) => (
-                          <span
-                            key={tag}
-                            className="text-xs px-3 py-1 bg-dark-200/50 backdrop-blur-sm border border-white/5 rounded-full text-white/70 group-hover:text-white"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Optional link */}
-                  {project.url && (
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-6 inline-flex items-center text-sm text-white/80 group-hover:text-white gap-2"
-                    >
-                      View Project
-                      <span aria-hidden>↗</span>
-                    </a>
+                  {/* Tags */}
+                  {project.techStack && project.techStack.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {project.techStack.map((tag: string) => (
+                        <span
+                          key={tag}
+                          className="text-xs px-3 py-1 bg-white/5 border border-white/10 
+                                     rounded-full text-white/70 group-hover:text-white"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   )}
                 </div>
-              </GlowCard>
+
+                {/* Optional link */}
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-6 inline-flex items-center text-sm text-white/80 group-hover:text-white gap-2"
+                  >
+                    View Project
+                    <span aria-hidden>↗</span>
+                  </a>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
