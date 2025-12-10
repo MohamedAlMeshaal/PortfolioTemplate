@@ -24,7 +24,7 @@ const ContactSection: React.FC = () => {
     
     // Simulate form submission
     setTimeout(() => {
-      toast.success('Message sent successfully!');
+      toast.success('Thanks for reaching out — I’ll get back to you soon.');
       setFormData({ name: '', email: '', message: '' });
       setIsSubmitting(false);
     }, 1500);
@@ -54,7 +54,7 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <p className="text-lg mb-6 text-white/80">
-              Have a project in mind or just want to chat? Feel free to reach out.
+  If you believe there’s value we can create together, share your details — I’ll reach out personally.
             </p>
             
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -165,7 +165,7 @@ const ContactSection: React.FC = () => {
               <div className="text-center relative z-10">
                 <p className="text-white/70 mb-1">Or email me at:</p>
                 <a 
-                  href="mailto:john@example.com" 
+                  href="mailto:mhmsaed200213@gmail.com" 
                   className="text-white hover:underline hover:text-white/90 transition-colors relative group"
                 >
                   john@example.com
