@@ -18,17 +18,29 @@ const ContactSection: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast.success('Thanks for reaching out — I’ll get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1500);
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch("https://formspree.io/f/mvgewqbb", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      toast.success("Thanks for reaching out — I’ll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      toast.error("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    toast.error("Network error. Please try again.");
+  }
+
+  setIsSubmitting(false);
+};
 
   return (
     <section id="contact" className="py-20 px-4 relative">
