@@ -6,7 +6,6 @@ import ExperienceSection from '@/components/ExperienceSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import EducationTimeline from '@/components/EducationTimeline';
 import BlogSection from '@/components/BlogSection';
-import ResumeRequestSection from "@/components/ResumeRequestSection";
 import ContactSection from '@/components/ContactSection';
 
 const Index: React.FC = () => {
@@ -120,7 +119,6 @@ const Index: React.FC = () => {
   <ProjectsSection />
   <EducationTimeline />
   <BlogSection />
-  <ResumeSection /> 
   <ContactSection />
 </main>
         
