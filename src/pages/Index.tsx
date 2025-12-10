@@ -100,12 +100,7 @@ const Index: React.FC = () => {
                   </a>
                 </li>
                 <li>
-              <a
-  href="#resume"
-  className="..."
->
-  Resume
-</a>
+    
                 </li>
               </ul>
             </nav>
