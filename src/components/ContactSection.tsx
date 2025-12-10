@@ -54,7 +54,7 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <p className="text-lg mb-6 text-white/80">
-  If you believe there’s value we can create together, share your details — I’ll reach out personally.
+  If you believe there’s value we can create together, share your details, and I’ll reach out personally.
             </p>
             
             <form onSubmit={handleSubmit} className="space-y-5">
