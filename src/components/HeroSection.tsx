@@ -13,28 +13,24 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="min-h-[70vh] md:min-h-screen flex flex-col justify-center items-center text-center px-6 py-12 md:py-20 relative overflow-hidden">
+    <section className="min-h-[50vh] md:min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16 pb-8 md:py-20 relative overflow-hidden">
 
       {/* Background Lighting */}
       <div className="corner-light-premium"></div>
-      <div
-        className="corner-light-premium"
-        style={{ right: 0, left: "auto", transform: "rotate(90deg)" }}
-      ></div>
+      <div className="corner-light-premium" style={{ right: 0, left: "auto", transform: "rotate(90deg)" }}></div>
 
       {/* Central Glow */}
       <div className="absolute w-[800px] h-[800px] rounded-full bg-radial-glow-premium opacity-60 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
       {/* MAIN TEXT */}
       <motion.h1
-        className="relative text-3xl md:text-6xl font-extrabold text-white leading-tight space-y-4 z-10"
+        className="relative text-3xl md:text-6xl font-extrabold text-white leading-tight z-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* AR Welcome */}
         <motion.span
-          className="block text-2xl md:text-5xl"
+          className="block text-2xl md:text-5xl mb-2"
           initial="hidden"
           animate="visible"
           custom={0}
@@ -43,7 +39,6 @@ const HeroSection: React.FC = () => {
           أهلاً بكم
         </motion.span>
 
-        {/* AR Name */}
         <motion.span
           className="block hero-text-gradient text-3xl md:text-6xl"
           initial="hidden"
@@ -57,18 +52,15 @@ const HeroSection: React.FC = () => {
 
       {/* DESCRIPTION */}
       <motion.p
-        className="text-base md:text-2xl font-light italic text-white/80 leading-relaxed max-w-3xl mx-auto mt-6 md:mt-10 px-2"
+        className="text-sm md:text-xl font-light italic text-white/80 leading-relaxed max-w-2xl mx-auto mt-5 px-2 z-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
-        {/* AR Description */}
-        <span className="block mb-2 text-sm md:text-xl">
+        <span className="block mb-2">
           هذه الصفحة تجمع أفضل ما صنعت من أعمال، مبادرات، تجارب، ومحطات شكّلت رحلتي وصنعت فرقاً حقيقياً
         </span>
-
-        {/* EN Description */}
-        <span className="block text-sm md:text-xl">
+        <span className="block">
           This page brings together the work, initiatives, and experiences that shaped my journey and created meaningful impact
         </span>
       </motion.p>
@@ -76,7 +68,7 @@ const HeroSection: React.FC = () => {
       {/* Button */}
       <motion.a
         href="#projects"
-        className="cta-button-premium text-base md:text-lg px-6 py-3 mt-8 md:mt-10 inline-flex items-center gap-2"
+        className="cta-button-premium text-base md:text-lg px-6 py-3 mt-6 inline-flex items-center gap-2 z-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.8 }}
