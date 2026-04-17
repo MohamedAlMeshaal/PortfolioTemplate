@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 py-20 relative overflow-hidden">
+    <section className="min-h-[70vh] md:min-h-screen flex flex-col justify-center items-center text-center px-6 py-12 md:py-20 relative overflow-hidden">
 
       {/* Background Lighting */}
       <div className="corner-light-premium"></div>
@@ -32,10 +32,9 @@ const HeroSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-
         {/* AR Welcome */}
         <motion.span
-          className="block"
+          className="block text-2xl md:text-5xl"
           initial="hidden"
           animate="visible"
           custom={0}
@@ -46,7 +45,7 @@ const HeroSection: React.FC = () => {
 
         {/* AR Name */}
         <motion.span
-          className="block hero-text-gradient"
+          className="block hero-text-gradient text-3xl md:text-6xl"
           initial="hidden"
           animate="visible"
           custom={1}
@@ -58,18 +57,18 @@ const HeroSection: React.FC = () => {
 
       {/* DESCRIPTION */}
       <motion.p
-        className="text-xl md:text-2xl font-light italic text-white/80 leading-relaxed max-w-3xl mx-auto space-y-4 mt-10"
+        className="text-base md:text-2xl font-light italic text-white/80 leading-relaxed max-w-3xl mx-auto mt-6 md:mt-10 px-2"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
         {/* AR Description */}
-        <span className="block mb-2">
+        <span className="block mb-2 text-sm md:text-xl">
           هذه الصفحة تجمع أفضل ما صنعت من أعمال، مبادرات، تجارب، ومحطات شكّلت رحلتي وصنعت فرقاً حقيقياً
         </span>
 
         {/* EN Description */}
-        <span className="block">
+        <span className="block text-sm md:text-xl">
           This page brings together the work, initiatives, and experiences that shaped my journey and created meaningful impact
         </span>
       </motion.p>
@@ -77,7 +76,7 @@ const HeroSection: React.FC = () => {
       {/* Button */}
       <motion.a
         href="#projects"
-        className="cta-button-premium text-lg px-6 py-3 mt-10 inline-flex items-center gap-2"
+        className="cta-button-premium text-base md:text-lg px-6 py-3 mt-8 md:mt-10 inline-flex items-center gap-2"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.8 }}
