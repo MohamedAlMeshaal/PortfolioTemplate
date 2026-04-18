@@ -1,21 +1,31 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { projectsData } from "@/lib/projectsData";
+import { useEffect } from "react";
 
 export default function ProjectDetails() {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
   const project = projectsData.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleBack = () => {
+    navigate(-1);
+  };
 
   if (!project) {
     return (
       <main className="min-h-screen bg-black text-white flex items-center justify-center">
         <div className="text-center space-y-4">
           <p className="text-lg">Project not found.</p>
-          <Link
-            to="/#projects"
+          <button
+            onClick={handleBack}
             className="text-sm text-white/70 hover:text-white underline"
           >
             ← Back to Featured Projects
-          </Link>
+          </button>
         </div>
       </main>
     );
@@ -32,13 +42,13 @@ export default function ProjectDetails() {
       <div className="max-w-5xl mx-auto px-4 py-10 md:py-16">
         {/* Top bar */}
         <div className="flex items-center justify-between gap-4 mb-8">
-          <Link
-            to="/#projects"
+          <button
+            onClick={handleBack}
             className="text-sm text-white/60 hover:text-white/90 inline-flex items-center gap-2"
           >
             <span className="text-lg">←</span>
             <span>Back to Featured Projects</span>
-          </Link>
+          </button>
           {project.date && (
             <span className="text-xs md:text-sm px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70">
               {project.date}
@@ -70,7 +80,6 @@ export default function ProjectDetails() {
             </p>
           )}
 
-          {/* Tags */}
           {project.tags?.length ? (
             <div className="flex flex-wrap gap-2 pt-2">
               {project.tags.map((tag) => (
