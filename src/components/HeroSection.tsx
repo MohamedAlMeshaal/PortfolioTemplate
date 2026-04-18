@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="min-h-[50vh] md:min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16 pb-8 md:py-20 relative overflow-hidden">
+    <section className="min-h-[85vh] md:min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16 pb-8 md:py-20 relative overflow-hidden">
 
       {/* Background Lighting */}
       <div className="corner-light-premium"></div>
