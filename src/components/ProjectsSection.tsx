@@ -14,9 +14,9 @@ const ProjectsSection: React.FC = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.3,
         ease: "easeOut",
-        staggerChildren: 0.08,
+        staggerChildren: 0.03,
       },
     },
   };
