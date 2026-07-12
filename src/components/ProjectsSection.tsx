@@ -56,6 +56,39 @@ const ProjectsSection: React.FC = () => {
         </motion.p>
 
         <motion.div
+          className="relative rounded-2xl border border-white/20 bg-white/5 backdrop-blur-sm p-8 mb-12 overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          {/* Glow effect */}
+          <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-white/10 blur-2xl pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <span className="text-xs uppercase tracking-widest text-white/40 mb-2 block">
+                Highlight Achievement
+              </span>
+              <h3 className="text-2xl md:text-3xl font-extrabold text-white">
+                President
+              </h3>
+              <p className="text-white/60 text-base mt-1">
+                College of Business Administration Society · University of Bahrain
+              </p>
+              <ul className="mt-4 space-y-1 text-white/70 text-sm list-disc pl-5">
+                <li>Led and managed a student society of 100+ active members.</li>
+                <li>Planned and organized cultural, awareness, and entertainment events on and off campus.</li>
+                <li>Coordinated partnerships and sponsorships to support society initiatives.</li>
+              </ul>
+            </div>
+            <div className="text-right shrink-0">
+              <span className="text-white/50 text-sm">Nov 2024 – Dec 2025</span>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
           initial="hidden"

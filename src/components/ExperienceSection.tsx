@@ -20,18 +20,6 @@ const experiences: Experience[] = [
   },
 
   {
-    role: "President",
-    company:
-      "College of Business Administration Society | University of Bahrain",
-    date: "Nov 2024 – Present",
-    bullets: [
-      "Lead and manage a student society of 100+ active members.",
-      "Plan and organize cultural, awareness, and entertainment events on and off campus.",
-      "Coordinate partnerships and sponsorships to support society initiatives.",
-    ],
-  },
-
-  {
     role: "Salesperson",
     company: "Metals International",
     date: "Jan 2024 – July 2025",
