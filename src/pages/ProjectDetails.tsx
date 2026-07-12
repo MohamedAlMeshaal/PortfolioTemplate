@@ -31,8 +31,8 @@ export default function ProjectDetails() {
     );
   }
 
-  const images = (project as any).images as string[] | undefined;
-  const videos = (project as any).videos as string[] | undefined;
+  const images = project.images;
+  const videos = project.videos;
 
   const hasImages = Array.isArray(images) && images.length > 0;
   const hasVideos = Array.isArray(videos) && videos.length > 0;

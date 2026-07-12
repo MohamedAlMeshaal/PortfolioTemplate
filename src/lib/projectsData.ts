@@ -3,12 +3,13 @@ export type ProjectDetails = {
   slug: string;          // عنوان URL قصير وفريد (بدون مسافات)
   title: string;         // عنوان المشروع
   date?: string;         // تاريخ اختياري
+  category?: string;     // تصنيف اختياري
   description: string;   // وصف مختصر
   role?: string;         // دورك
   outcome?: string;      // النتائج/الأثر
   tags: string[];        // البادجز (بالإنجليزي)
   images?: string[];     // روابط صور (اختياري)
-  videos?: string;     // رابط فيديو (اختياري)
+  videos?: string[];     // روابط فيديو (اختياري)
 };
 
 export const projectsData: ProjectDetails[] = [
