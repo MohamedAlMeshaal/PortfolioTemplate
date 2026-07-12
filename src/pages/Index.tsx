@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import TechMarquee from '@/components/TechMarquee';
 import ExperienceSection from '@/components/ExperienceSection';
+import WorkSection from '@/components/WorkSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import EducationTimeline from '@/components/EducationTimeline';
 import BlogSection from '@/components/BlogSection';
@@ -111,6 +112,7 @@ const Index: React.FC = () => {
   <HeroSection />
   <TechMarquee />
   <ExperienceSection />
+  <WorkSection />
   <ProjectsSection />
   <EducationTimeline />
   <BlogSection />

@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import ProjectDetails from "./pages/ProjectDetails";
+import WorkDetails from "./pages/WorkDetails";
 
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -19,6 +20,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/projects/:slug" element={<ProjectDetails />} />
+        <Route path="/work/:slug" element={<WorkDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </TooltipProvider>
