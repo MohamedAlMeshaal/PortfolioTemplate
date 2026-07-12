@@ -11,14 +11,6 @@ type EducationItem = {
 
 const education: EducationItem[] = [
   {
-    period: "2018 – 2020",
-    title: "Commercial Track",
-    institution: "Al Ta'awon Secondary Boys School",
-    location: "Bahrain",
-    details:
-      "Completed secondary education with a specialization in commercial studies, gaining foundational knowledge in business, accounting, and economics.",
-  },
-  {
     period: "2021 – 2025",
     title:
       "B.Sc. in Science of Entrepreneurship & Marketing",
