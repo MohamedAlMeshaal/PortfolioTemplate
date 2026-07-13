@@ -4,6 +4,7 @@ import "./index.css";
 import { BrowserRouter, useLocation } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import { useEffect } from "react";
+import { LanguageProvider } from './context/LanguageContext';
 
 const ScrollRestoration = () => {
   const location = useLocation();
@@ -20,9 +21,11 @@ const ScrollRestoration = () => {
 };
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
-    <ScrollRestoration />
-    <App />
-    <Analytics />
-  </BrowserRouter>
+  <LanguageProvider>
+    <BrowserRouter>
+      <ScrollRestoration />
+      <App />
+      <Analytics />
+    </BrowserRouter>
+  </LanguageProvider>
 );

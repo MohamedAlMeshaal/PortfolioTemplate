@@ -8,8 +8,11 @@ import ProjectsSection from '@/components/ProjectsSection';
 import EducationTimeline from '@/components/EducationTimeline';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
+import LanguagePopup from "../components/LanguagePopup";
+import { useLanguage } from "../context/LanguageContext";
 
 const Index: React.FC = () => {
+  const { isArabic, setLanguage, language } = useLanguage();
   return (
     <AnimatePresence>
       <motion.div
@@ -18,6 +21,7 @@ const Index: React.FC = () => {
         exit={{ opacity: 0 }}
         className="bg-dark min-h-screen relative"
       >
+        <LanguagePopup />
         {/* Enhanced premium light source effects */}
         <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
           {/* Main light source */}
@@ -83,25 +87,30 @@ const Index: React.FC = () => {
     <span className="pointer-events-none absolute inset-0 rounded-full bg-white/10 opacity-0
                      group-hover:opacity-100 blur-md transition-opacity duration-300"></span>
   </div>
-  Mohamed Saed
+  {isArabic ? "محمد المشعل" : "Mohamed Almeshal"}
 </h1>
 
             <nav className="hidden md:block">
-              <ul className="flex space-x-8">
-                <li>
-                  <a href="#projects" className="hover:text-white transition-colors relative group">
-                    Projects
-                    <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
-                  </a>
-                </li>
+              <ul className={`flex ${isArabic ? "space-x-reverse space-x-8" : "space-x-8"}`}>
                 <li>
                   <a href="#contact" className="hover:text-white transition-colors relative group">
-                    Contact
+                    {isArabic ? "تواصل معي" : "Contact"}
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
                   </a>
                 </li>
                 <li>
-    
+                  <a href="#projects" className="hover:text-white transition-colors relative group">
+                    {isArabic ? "مشاريعي" : "Projects"}
+                    <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
+                  </a>
+                </li>
+                <li>
+                  <button
+                    onClick={() => setLanguage(language === "ar" ? "en" : "ar")}
+                    className="text-sm font-medium text-white/50 hover:text-white transition-colors px-3 py-1 rounded-lg border border-white/10 hover:border-white/30"
+                  >
+                    {language === "ar" ? "EN" : "AR"}
+                  </button>
                 </li>
               </ul>
             </nav>
@@ -122,7 +131,7 @@ const Index: React.FC = () => {
         <footer className="py-12 px-4 border-t border-white/10 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <p className="text-white/60">
-              © {new Date().getFullYear()} Mohamed Saed. All rights reserved.
+              © {new Date().getFullYear()} {isArabic ? "محمد المشعل. جميع الحقوق محفوظة." : "Mohamed Almeshal. All rights reserved."}
             </p>
           </div>
         </footer>

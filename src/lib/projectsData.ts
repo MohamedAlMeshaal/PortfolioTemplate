@@ -1,272 +1,222 @@
-  // src/lib/projectsData.ts
 export type ProjectDetails = {
-  slug: string;          // عنوان URL قصير وفريد (بدون مسافات)
-  title: string;         // عنوان المشروع
-  date?: string;         // تاريخ اختياري
-  category?: string;     // تصنيف اختياري
-  description: string;   // وصف مختصر
-  role?: string;         // دورك
-  outcome?: string;      // النتائج/الأثر
-  tags: string[];        // البادجز (بالإنجليزي)
-  images?: string[];     // روابط صور (اختياري)
-  videos?: string[];     // روابط فيديو (اختياري)
+  slug: string;
+  title: string;
+  title_ar?: string;
+  date?: string;
+  category?: string;
+  description: string;
+  description_ar?: string;
+  role?: string;
+  role_ar?: string;
+  outcome?: string;
+  outcome_ar?: string;
+  tags: string[];
+  tags_ar?: string[];
+  images?: string[];
+  videos?: string[];
+  url?: string;
 };
 
 export const projectsData: ProjectDetails[] = [
   {
-  slug: "unido-training",
-  title: "UNIDO Volunteer",
-  date: "May 14-16, 2024",
-  category: "certificates",
-  role: "Participant",
-  description:
-    "Completed a specialized training program organized by UNIDO ITPO Bahrain and the International Center for Entrepreneurship & Innovation. The program focused on volunteering management, conference planning, and event operations.",
-  outcome:
-    "Gained practical skills in event coordination, volunteer engagement, and conference management.",
-    tags: [
-  "Training Program",
-  "Volunteer Management",
-  "Conference Planning",
-],
-  images: ["/Unido.jpeg.jpeg"],
-  videos: []
-},
-  
+    slug: "unido-training",
+    title: "UNIDO Volunteer",
+    title_ar: "منظم في مؤتمر المركز الدولي لريادة الأعمال والابتكار",
+    date: "May 14-16, 2024",
+    category: "certificates",
+    role: "Participant",
+    role_ar: "مشارك",
+    description: "Completed a specialized training program organized by UNIDO ITPO Bahrain and the International Center for Entrepreneurship & Innovation. The program focused on volunteering management, conference planning, and event operations.",
+    description_ar: "أتممت برنامجاً تدريبياً متخصصاً نظّمته يونيدو ITPO البحرين والمركز الدولي لريادة الأعمال والابتكار. ركّز البرنامج على إدارة التطوع وتخطيط المؤتمرات وتشغيل الفعاليات.",
+    outcome: "Gained practical skills in event coordination, volunteer engagement, and conference management.",
+    outcome_ar: "اكتسبت مهارات عملية في تنسيق الفعاليات وإشراك المتطوعين وإدارة المؤتمرات.",
+    tags: ["Training Program", "Volunteer Management", "Conference Planning"],
+    tags_ar: ["برنامج تدريبي", "إدارة المتطوعين", "تخطيط المؤتمرات"],
+    images: ["/Unido.jpeg.jpeg"],
+    videos: [],
+  },
   {
-  slug: "uob-sustainable-conference",
-  title: "Organizer at Sustainable Islamic Finance Conference",
-  date: "November 27-28, 2024",
-  category: "certificates",
-  role: "Organizer",
-  description:
-    "Recognized by the College of Business Administration at the University of Bahrain for participating in organizing the 4th International Conference on Sustainable Islamic Business and Finance.",
-  outcome:
-    "Supported event logistics and coordination for an international academic conference.",
-    tags: [
-  "Event Organization",
-  "Conference Management",
-  "Team Coordination",
-],
-  images: ["/Organizer-Islamic.jpeg.jpeg"],
-  videos: []
-},
-
-    // 1) ورشة تعريف جمعية كلية إدارة الأعمال
- {
-  slug: "cobs-introductory",
-  title: "COBS Introductory",
-  date: "November 24, 2024",
-  category: "cobs",
-  role: "Speaker",
-  description:
-    "Introductory workshop at the University of Bahrain to present the College of Business Society: who we are, our vision, mission, and how students can join and be part of the journey.",
-  outcome:
-    "80+ interested students attended · clarified the society’s identity and role · increased awareness and applications to join COBS.",
-  tags: [
-    "Workshop",
-    "Student Leadership",
-    "Community Engagement",
-    "Public Speaking",
-    "University Life",
-  ],
-  images: [
-    "/cobs-Introductory1.jpeg.jpeg",
-    "/cobs-Introductory2.jpeg.jpeg",
-    "/cobs-Introductory3.jpeg.jpeg",
-  ],
-  videos: [
-    "/cobs-Introductory1.mp4.mp4",
-    "/cobs-Introductory2.mp4.mp4",
-  ],
-},
-
-  // 2) فعالية يوم المرأة البحرينية
+    slug: "uob-sustainable-conference",
+    title: "Organizer at Sustainable Islamic Finance Conference",
+    title_ar: "منظّم في مؤتمر التمويل الإسلامي المستدام",
+    date: "November 27-28, 2024",
+    category: "certificates",
+    role: "Organizer",
+    role_ar: "منظّم",
+    description: "Recognized by the College of Business Administration at the University of Bahrain for participating in organizing the 4th International Conference on Sustainable Islamic Business and Finance.",
+    description_ar: "تم تكريمي من كلية إدارة الأعمال في جامعة البحرين للمشاركة في تنظيم المؤتمر الدولي الرابع للأعمال والتمويل الإسلامي المستدام.",
+    outcome: "Supported event logistics and coordination for an international academic conference.",
+    outcome_ar: "دعمت الخدمات اللوجستية والتنسيق لمؤتمر أكاديمي دولي.",
+    tags: ["Event Organization", "Conference Management", "Team Coordination"],
+    tags_ar: ["تنظيم الفعاليات", "إدارة المؤتمرات", "تنسيق الفرق"],
+    images: ["/Organizer-Islamic.jpeg.jpeg"],
+    videos: [],
+  },
+  {
+    slug: "cobs-introductory",
+    title: "COBS Introductory",
+    title_ar: "تقديم ورشة تعريفية بجمعية كلية إدارة الأعمال",
+    date: "November 24, 2024",
+    category: "cobs",
+    role: "Speaker",
+    role_ar: "متحدث",
+    description: "Introductory workshop at the University of Bahrain to present the College of Business Society: who we are, our vision, mission, and how students can join and be part of the journey.",
+    description_ar: "ورشة تعريفية في جامعة البحرين لتقديم جمعية كلية إدارة الأعمال: من نحن، رؤيتنا، رسالتنا، وكيف يمكن للطلاب الانضمام والمشاركة في الرحلة.",
+    outcome: "80+ interested students attended · clarified the society's identity and role · increased awareness and applications to join COBS.",
+    outcome_ar: "حضر أكثر من 80 طالباً مهتماً · وضّحنا هوية الجمعية ودورها · زاد الوعي والتقديمات للانضمام.",
+    tags: ["Workshop", "Student Leadership", "Community Engagement", "Public Speaking", "University Life"],
+    tags_ar: ["ورشة عمل", "قيادة طلابية", "مشاركة مجتمعية", "الخطابة العامة", "الحياة الجامعية"],
+    images: ["/cobs-Introductory1.jpeg.jpeg", "/cobs-Introductory2.jpeg.jpeg", "/cobs-Introductory3.jpeg.jpeg"],
+    videos: ["/cobs-Introductory1.mp4.mp4", "/cobs-Introductory2.mp4.mp4"],
+  },
   {
     slug: "cobs-bahraini-womens-day-2024",
-    title: "Bahraini Women’s Day",
+    title: "Bahraini Women's Day",
+    title_ar: "يوم المرأة البحرينية",
     date: "December 1, 2024",
     category: "cobs",
-    description:
-      "Led the College of Business Administration Society in organizing a special event for Bahraini Women’s Day, celebrating the achievements of Bahraini women and highlighting their impact in society and business.",
     role: "Leader of the Event",
-    outcome:
-      "Created a respectful and inspiring celebration · strengthened the society’s connection with female students · highlighted role models from Bahraini women.",
-    tags: [
-      "Event Design",
-      "Cultural Event",
-      "Community Engagement",
-      "Student Leadership",
-    ],
-    videos: [
-    "/Bahraini-Women’s-Day.mp4",
-  ],
+    role_ar: "قائد الفعالية",
+    description: "Led the College of Business Administration Society in organizing a special event for Bahraini Women's Day, celebrating the achievements of Bahraini women and highlighting their impact in society and business.",
+    description_ar: "قدت جمعية كلية إدارة الأعمال في تنظيم فعالية خاصة بيوم المرأة البحرينية، احتفاءً بإنجازات المرأة البحرينية وإبراز تأثيرها في المجتمع والأعمال.",
+    outcome: "Created a respectful and inspiring celebration · strengthened the society's connection with female students · highlighted role models from Bahraini women.",
+    outcome_ar: "أقمنا احتفالاً ملهماً · عزّزنا علاقة الجمعية بالطالبات · أبرزنا قدوات من المرأة البحرينية.",
+    tags: ["Event Design", "Cultural Event", "Community Engagement", "Student Leadership"],
+    tags_ar: ["تصميم الفعاليات", "فعالية ثقافية", "مشاركة مجتمعية", "قيادة طلابية"],
+    videos: ["/Bahraini-Women’s-Day.mp4"],
   },
-
-  // 3) زيارة مصرف البحرين المركزي
   {
     slug: "cobs-cbb-visit-2024",
     title: "Central Bank of Bahrain Visit",
+    title_ar: "زيارة مصرف البحرين المركزي",
     date: "December 3, 2024",
     category: "cobs",
-    description:
-      "Organized and led a COBS delegation visit to the Central Bank of Bahrain to learn about money flow, financial systems, and how the national banking ecosystem operates.",
     role: "COBS Delegation Leader",
-    outcome:
-      "Introduced members to real-world finance and monetary policy · first exposure to banking operations, investment, and physical vs. digital currencies.",
-    tags: [
-      "Industry Visit",
-      "Finance",
-      "Banking",
-      "Experiential Learning",
-      "Career Awareness",
-    ],
-     images: [
-    "/Central-Bank-of-Bahrain-Visit.jpeg.jpeg",
-  ],
-  videos: [
-    "/Central-Bank-of-Bahrain-Visit.mp4.mp4",
-  ],
+    role_ar: "قائد وفد الجمعية",
+    description: "Organized and led a COBS delegation visit to the Central Bank of Bahrain to learn about money flow, financial systems, and how the national banking ecosystem operates.",
+    description_ar: "نظّمت وقدت وفد الجمعية في زيارة إلى مصرف البحرين المركزي للتعرف على تدفق الأموال والأنظمة المالية وكيفية عمل المنظومة المصرفية الوطنية.",
+    outcome: "Introduced members to real-world finance and monetary policy · first exposure to banking operations, investment, and physical vs. digital currencies.",
+    outcome_ar: "عرّفنا الأعضاء على التمويل الواقعي والسياسة النقدية · أول تجربة لعمليات البنوك والاستثمار والعملات.",
+    tags: ["Industry Visit", "Finance", "Banking", "Experiential Learning", "Career Awareness"],
+    tags_ar: ["زيارة ميدانية", "التمويل", "المصارف", "التعلم التجريبي", "الوعي المهني"],
+    images: ["/Central-Bank-of-Bahrain-Visit.jpeg.jpeg"],
+    videos: ["/Central-Bank-of-Bahrain-Visit.mp4.mp4"],
   },
-
   {
     slug: "cobs-walhana",
     title: "Walhana Alaikom Event",
+    title_ar: "فعالية ولهنا عليكم",
     date: "February 27, 2025",
     category: "cobs",
-    description:
-      "Ramadan-themed welcome event for semester 2024/2. Re-energized students and celebrated community spirit.",
     role: "Leader of the Event",
-    outcome:
-      "Managed 70+ volunteers · 500+ attendees · sponsorship & media coverage · organized in < 1 week",
+    role_ar: "قائد الفعالية",
+    description: "Ramadan-themed welcome event for semester 2024/2. Re-energized students and celebrated community spirit.",
+    description_ar: "فعالية ترحيبية بطابع رمضاني للفصل الدراسي 2024/2. أعادت تنشيط الطلاب واحتفت بروح المجتمع.",
+    outcome: "Managed 70+ volunteers · 500+ attendees · sponsorship & media coverage · organized in < 1 week",
+    outcome_ar: "أدرت أكثر من 70 متطوعاً · أكثر من 500 حاضر · رعايات وتغطية إعلامية · نُظّمت في أقل من أسبوع",
     tags: ["Event Design", "Leadership", "Operations", "Volunteers", "Sponsorship", "Media Coverage"],
+    tags_ar: ["تصميم الفعاليات", "القيادة", "العمليات", "المتطوعون", "الرعايات", "التغطية الإعلامية"],
     images: ["/cobs-walhana-1.jpeg"],
-    videos:  [
-    "/cobs-walhana-video1.mp4.mp4",
-    "/cobs-walhana-video2.mp4.mp4  "
-  ]
+    videos: ["/cobs-walhana-video1.mp4.mp4", "/cobs-walhana-video2.mp4.mp4"],
   },
   {
     slug: "cobs-ramadan-football",
     title: "COBS Ramadan Football Tournament",
+    title_ar: "بطولة جمعية كلية إدارة الأعمال الرمضانية الأولى",
     date: "March 16, 2025",
     category: "cobs",
-    description:
-      "Student football tournament uniting diverse teams with excitement and sportsmanship.",
     role: "General Leader (COBS President)",
-    outcome:
-      "150+ participants · large audience turnout · sponsorship · media coverage · 30+ volunteers",
+    role_ar: "القائد العام (رئيس الجمعية)",
+    description: "Student football tournament uniting diverse teams with excitement and sportsmanship.",
+    description_ar: "بطولة كرة قدم طلابية جمعت فرقاً متنوعة بحماس وروح رياضية عالية.",
+    outcome: "150+ participants · large audience turnout · sponsorship · media coverage · 30+ volunteers",
+    outcome_ar: "أكثر من 150 مشاركاً · حضور جماهيري كبير · رعايات · تغطية إعلامية · أكثر من 30 متطوعاً",
     tags: ["Sports Event", "Team Management", "Leadership", "Sponsorship", "Media Coverage", "Volunteers"],
-     videos: [
-       "/cobs-tournament1.mp4.mp4",
-       "/cobs-tournament2.mp4.mp4"
-             ]
+    tags_ar: ["فعالية رياضية", "إدارة الفرق", "القيادة", "الرعايات", "التغطية الإعلامية", "المتطوعون"],
+    videos: ["/cobs-tournament1.mp4.mp4", "/cobs-tournament2.mp4.mp4"],
   },
   {
     slug: "cobs-carnival",
     title: "Carnival COBS 1",
+    title_ar: "كرنفال جمعية كلية إدارة الأعمال الأول",
     date: "May 4, 2025",
     category: "cobs",
-    description:
-      "Vibrant handmade carnival with creative booth games, festive decor, popcorn and ice cream.",
     role: "Part of the tournament organizer",
-    outcome:
-      "80+ volunteers · 1,000+ attendees · major sponsorships · media coverage",
+    role_ar: "ضمن فريق التنظيم",
+    description: "Vibrant handmade carnival with creative booth games, festive decor, popcorn and ice cream.",
+    description_ar: "كرنفال نابض بالحياة مصنوع يدوياً مع ألعاب أكشاك إبداعية وديكور احتفالي وفشار وآيس كريم.",
+    outcome: "80+ volunteers · 1,000+ attendees · major sponsorships · media coverage",
+    outcome_ar: "أكثر من 80 متطوعاً · أكثر من 1000 حاضر · رعايات كبرى · تغطية إعلامية",
     tags: ["Carnival Design", "Operations", "Volunteers", "Sponsorship", "Media Coverage"],
-    images: [
-      "/carnival-cobs1.jpeg.jpeg",
-      "/carnival-cobs2.jpeg.jpeg"
-    ],
-    videos:  [
-    "/carnival-cobs1.mp4.mp4",
-    "/carnival-cobs2.mp4.mp4"
-  ],
+    tags_ar: ["تصميم الكرنفال", "العمليات", "المتطوعون", "الرعايات", "التغطية الإعلامية"],
+    images: ["/carnival-cobs1.jpeg.jpeg", "/carnival-cobs2.jpeg.jpeg"],
+    videos: ["/carnival-cobs1.mp4.mp4", "/carnival-cobs2.mp4.mp4"],
   },
   {
     slug: "cobs-inspiring-talk",
     title: "Guests of COBS",
+    title_ar: "ضيوف جمعية كلية إدارة الأعمال",
     date: "October 12, 2025",
     category: "cobs",
-    description:
-      "Open talk with Mr. Suheil Al-Qusaibi on challenges and lessons from his entrepreneurial journey.",
     role: "Event Lead",
-    outcome:
-      "High student turnout · boosted interest in inspirational sessions and career dialogues",
+    role_ar: "قائد الفعالية",
+    description: "Open talk with Mr. Suheil Al-Qusaibi on challenges and lessons from his entrepreneurial journey.",
+    description_ar: "جلسة حوارية مفتوحة مع السيد سهيل القصيبي حول تحديات ودروس من رحلته الريادية.",
+    outcome: "High student turnout · boosted interest in inspirational sessions and career dialogues",
+    outcome_ar: "إقبال طلابي كبير · تعزيز الاهتمام بالجلسات الإلهامية وحوارات المسيرة المهنية",
     tags: ["Leadership Talk", "Organization", "Public Speaking", "Event Planning"],
+    tags_ar: ["جلسة قيادية", "التنظيم", "الخطابة العامة", "تخطيط الفعاليات"],
     images: [],
   },
-  
-  // 4) زيارة خليجي بنك
   {
     slug: "cobs-khaleeji-bank-visit-2024",
     title: "Khaleeji Bank Visit",
+    title_ar: "زيارة بنك خليجي",
     date: "October 20, 2024",
     category: "cobs",
-    description:
-      "Coordinated a focused visit for COBS members to Khaleeji Bank, exploring daily operations across departments and understanding how banking roles connect to what students study in class.",
     role: "COBS Visit Coordinator",
-    outcome:
-      "Increased financial awareness among members · built relationships with bank professionals · showed students how academic knowledge links to real banking careers.",
-    tags: [
-      "Industry Visit",
-      "Banking",
-      "Career Development",
-      "Networking",
-      "Student Leadership",
-    ],
-    images: [
-      "/Khaleeji-Bank-Visit.jpeg.jpeg"
-    ],
+    role_ar: "منسق زيارة الجمعية",
+    description: "Coordinated a focused visit for COBS members to Khaleeji Bank, exploring daily operations across departments and understanding how banking roles connect to what students study in class.",
+    description_ar: "نسّقت زيارة مركّزة لأعضاء الجمعية إلى بنك خليجي، لاستكشاف العمليات اليومية عبر الأقسام وفهم كيفية ارتباط الأدوار المصرفية بما يدرسه الطلاب.",
+    outcome: "Increased financial awareness among members · built relationships with bank professionals · showed students how academic knowledge links to real banking careers.",
+    outcome_ar: "تعزيز الوعي المالي بين الأعضاء · بناء علاقات مع محترفي البنك · إظهار الرابط بين المعرفة الأكاديمية والمسارات المصرفية.",
+    tags: ["Industry Visit", "Banking", "Career Development", "Networking", "Student Leadership"],
+    tags_ar: ["زيارة ميدانية", "المصارف", "التطوير المهني", "التواصل", "قيادة طلابية"],
+    images: ["/Khaleeji-Bank-Visit.jpeg.jpeg"],
   },
   {
     slug: "cobs-carnival-2",
     title: "Carnival COBS 2",
+    title_ar: "كرنفال جمعية كلية إدارة الأعمال الثاني",
     date: "October 23, 2025",
     category: "cobs",
-    description:
-      "Second edition carnival for the College of Business — handmade games, popcorn, cotton candy, face painting, and live vibes created fully by the student team.",
     role: "General Leader / Executive Director",
-    outcome:
-      "100+ volunteers · 2,000+ attendees · major sponsorships · strong media coverage · higher recognition inside the university.",
-    tags: [
-      "Event Design",
-      "Leadership",
-      "Operations",
-      "Volunteers",
-      "Sponsorship",
-      "Media Coverage",
-    ],
-    images: [
-      "/cobs-carnival2-2.jpeg.jpeg",
-      "/cobs-carnival2-3.jpeg.jpeg",
-      "/cobs-carnival2-4.jpeg.jpeg",
-      "/cobs-carnival2-5.jpeg.jpeg",
-      "/cobs-carnival2-6.jpeg.jpeg",
-      "/cobs-carnival2-7.jpeg.jpeg",
-    ],
+    role_ar: "القائد العام / المدير التنفيذي",
+    description: "Second edition carnival for the College of Business — handmade games, popcorn, cotton candy, face painting, and live vibes created fully by the student team.",
+    description_ar: "الكرنفال من الإصدار الثاني لكلية إدارة الأعمال — ألعاب يدوية وفشار وغزل البنات ورسم الوجوه وأجواء حية صنعها الفريق الطلابي بالكامل.",
+    outcome: "100+ volunteers · 2,000+ attendees · major sponsorships · strong media coverage · higher recognition inside the university.",
+    outcome_ar: "أكثر من 100 متطوع · أكثر من 2000 حاضر · رعايات كبرى · تغطية إعلامية قوية · تعزيز الحضور داخل الجامعة.",
+    tags: ["Event Design", "Leadership", "Operations", "Volunteers", "Sponsorship", "Media Coverage"],
+    tags_ar: ["تصميم الفعاليات", "القيادة", "العمليات", "المتطوعون", "الرعايات", "التغطية الإعلامية"],
+    images: ["/cobs-carnival2-2.jpeg.jpeg", "/cobs-carnival2-3.jpeg.jpeg", "/cobs-carnival2-4.jpeg.jpeg", "/cobs-carnival2-5.jpeg.jpeg", "/cobs-carnival2-6.jpeg.jpeg", "/cobs-carnival2-7.jpeg.jpeg"],
     videos: ["/cobs-carnival2-video1.mp4.mp4", "/cobs-carnival2-video2.mp4.mp4"],
   },
-
   {
-  slug: "gcc-summit-representation",
-  title: "UOB Representation at the GCC Summit 46 Pavilion",
-  date: "November 13, 2025",
-  category: "representation",
-  role: "University Delegate",
-  description:
-    "Represented the University of Bahrain at the inauguration of the GCC Pavilion accompanying the 46th Gulf Summit. Engaged with diplomatic representatives and contributed to showcasing student initiatives.",
-  outcome:
-    "Enhanced networking experience and strengthened the university’s presence in a major regional event.",
-    tags: [
-  "Representation",
-  "Leadership",
-  "Public Relations",
-],
-  images: [
-    "/GCC1.jpeg.jpeg",
-    "/GCC2.jpeg.jpeg"
-  ],
-},
-
+    slug: "gcc-summit-representation",
+    title: "UOB Representation at the GCC Summit 46 Pavilion",
+    title_ar: "تمثيل جامعة البحرين في جناح قمة الخليج 46",
+    date: "November 13, 2025",
+    category: "representation",
+    role: "University Delegate",
+    role_ar: "مندوب الجامعة",
+    description: "Represented the University of Bahrain at the inauguration of the GCC Pavilion accompanying the 46th Gulf Summit. Engaged with diplomatic representatives and contributed to showcasing student initiatives.",
+    description_ar: "مثّلت جامعة البحرين في افتتاح الجناح الخليجي المرافق للقمة الخليجية الـ46. تفاعلت مع الممثلين الدبلوماسيين وساهمت في عرض مبادرات الطلاب.",
+    outcome: "Enhanced networking experience and strengthened the university's presence in a major regional event.",
+    outcome_ar: "تعزيز تجربة التواصل وتقوية حضور الجامعة في فعالية إقليمية كبرى.",
+    tags: ["Representation", "Leadership", "Public Relations"],
+    tags_ar: ["التمثيل", "القيادة", "العلاقات العامة"],
+    images: ["/GCC1.jpeg.jpeg", "/GCC2.jpeg.jpeg"],
+  },
 ];
 
 export default projectsData;
