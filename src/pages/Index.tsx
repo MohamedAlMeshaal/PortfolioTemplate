@@ -9,6 +9,7 @@ import EducationTimeline from '@/components/EducationTimeline';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 import LanguagePopup from "../components/LanguagePopup";
+import BusinessPopup from "../components/BusinessPopup";
 import { useLanguage } from "../context/LanguageContext";
 
 const Index: React.FC = () => {
@@ -22,6 +23,7 @@ const Index: React.FC = () => {
         className="bg-dark min-h-screen relative"
       >
         <LanguagePopup />
+        <BusinessPopup />
         {/* Enhanced premium light source effects */}
         <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
           {/* Main light source */}
